@@ -1,0 +1,18 @@
+<extra>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>Additional</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.buttonLabel>
+                <TCEforms>
+                    <label>Button-Text</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </settings.buttonLabel>
+        </el>
+    </ROOT>
+</extra>

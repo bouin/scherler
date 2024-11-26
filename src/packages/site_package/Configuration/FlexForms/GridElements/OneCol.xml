@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>EXT:mantik_theme/Configuration/FlexForms/GridElements/Default.xml</sDEF>
+        <OneCol>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Grid-Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <colSetup>
+                        <label>Grid Layout</label>
+                        <config>
+                            <type>select</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">12er Spalte</numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">10er Spalte</numIndex>
+                                    <numIndex index="1">col-sm-10</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">8er Spalte</numIndex>
+                                    <numIndex index="1">col-md-8</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </colSetup>
+                </el>
+            </ROOT>
+        </OneCol>
+    </sheets>
+</T3DataStructure>

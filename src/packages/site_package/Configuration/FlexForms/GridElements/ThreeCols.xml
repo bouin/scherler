@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>EXT:mantik_theme/Configuration/FlexForms/GridElements/Default.xml</sDEF>
+        <OneCol>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Grid-Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <layout>
+                        <onChange>reload</onChange>
+                        <label>Grid Layout</label>
+                        <config>
+                            <type>select</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">Default</numIndex>
+                                    <numIndex index="1">default</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">Schrink</numIndex>
+                                    <numIndex index="1">shrink</numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Animated Icon</numIndex>
+                                    <numIndex index="1">animate-icon</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">Cards</numIndex>
+                                    <numIndex index="1">cards</numIndex>
+                                </numIndex>
+                                <numIndex index="100" type="array">
+                                    <numIndex index="0">Footer Block *</numIndex>
+                                    <numIndex index="1">footer</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </layout>
+                    <linkCol1>
+                        <label>Link Column 1</label>
+                        <displayCond>
+                            <OR>
+                                <numIndex index="0">FIELD:layout:=:animate-icon</numIndex>
+                                <numIndex index="1">FIELD:layout:=:cards</numIndex>
+                            </OR>
+                        </displayCond>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                            <size>20</size>
+                            <max>30</max>
+                            <eval>trim, required</eval>
+                        </config>
+                    </linkCol1>
+                    <linkCol2>
+                        <label>Link Column 2</label>
+                        <displayCond>
+                            <OR>
+                                <numIndex index="0">FIELD:layout:=:animate-icon</numIndex>
+                                <numIndex index="1">FIELD:layout:=:cards</numIndex>
+                            </OR>
+                        </displayCond>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                            <size>20</size>
+                            <max>30</max>
+                            <eval>trim, required</eval>
+                        </config>
+                    </linkCol2>
+                    <linkCol3>
+                        <label>Link Column 3</label>
+                        <displayCond>
+                            <OR>
+                                <numIndex index="0">FIELD:layout:=:animate-icon</numIndex>
+                                <numIndex index="1">FIELD:layout:=:cards</numIndex>
+                            </OR>
+                        </displayCond>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                            <size>20</size>
+                            <max>30</max>
+                            <eval>trim, required</eval>
+                        </config>
+                    </linkCol3>
+                    <buttonLabel>
+                        <label>Button Label</label>
+                        <displayCond>
+                            FIELD:layout:=:cards
+                        </displayCond>
+                        <config>
+                            <type>input</type>
+                        </config>
+                    </buttonLabel>
+                    <buttonLink>
+                        <label>Button Link</label>
+                        <displayCond>
+                            FIELD:layout:=:cards
+                        </displayCond>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                            <size>20</size>
+                            <max>30</max>
+                            <eval>trim</eval>
+                        </config>
+                    </buttonLink>
+                </el>
+            </ROOT>
+        </OneCol>
+    </sheets>
+</T3DataStructure>
+

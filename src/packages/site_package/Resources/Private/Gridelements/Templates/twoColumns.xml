@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <general>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>Promo section</sheetTitle>
+                </TCEforms>
+
+                <el type="array">
+                    <themeSelector>
+                        <TCEforms>
+                            <label>Select your Backgorund color</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <section>1</section>
+                                <items type="array">
+                                    <numIndex index="0">
+                                        <numIndex index="0">White background</numIndex>
+                                            <numIndex index="1">white-bck</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Light Blue Background</numIndex>
+                                        <numIndex index="1">light-blue-bck</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">Light Grey Background</numIndex>
+                                        <numIndex index="1">grey-bck</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">Blue Background</numIndex>
+                                        <numIndex index="1">blue-bck</numIndex>
+                                    </numIndex>
+                                </items>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </themeSelector>
+                    <marginSelector>
+                        <TCEforms>
+                            <label>Select padding</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <section>1</section>
+                                <items type="array">
+                                    <numIndex index="0">
+                                        <numIndex index="0">Section padding</numIndex>
+                                        <numIndex index="1">none</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Small Padding</numIndex>
+                                        <numIndex index="1">small-padding</numIndex>
+                                    </numIndex>
+
+                                </items>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </marginSelector>
+                    
+                </el>
+            </ROOT>
+        </general>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,10 @@
+# Ignore several upload and file directories.
+*
+!src/
+!src/**
+!composer.json
+
+node_modules/
+src/packages/site_package/Resources/Public/Grunt/node_modules/
+
+

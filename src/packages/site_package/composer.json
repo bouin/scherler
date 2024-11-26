@@ -1,0 +1,20 @@
+{
+    "name": "studio/site-package",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://studiothompfister.com",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "CommixAg\\SitePackage\\": "Classes/"
+        }
+    },
+    "extra": {
+      "typo3/cms": {
+        "extension-key": "site_package"
+      }
+    }
+}

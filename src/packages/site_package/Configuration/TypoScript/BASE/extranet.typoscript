@@ -1,0 +1,25 @@
+
+lib.extranet = HMENU
+lib.extranet {
+   special =  list
+   special.value = 45
+   1 = TMENU
+   1.NO = 1
+   1.wrap = <div>|</div>
+   1.NO.ATagBeforeWrap = 1
+   1.NO.allWrap = |
+   1.NO.linkWrap = <img alt="extranet icon" src="/fileadmin/user_upload/icon-extranet.png">|
+}
+
+lib.support = HMENU
+lib.support {
+    special = list
+    special.value = 54
+    maxItems = 1
+    1 = TMENU
+    1.NO = 1
+    1.NO.ATagBeforeWrap = 1
+    1.wrap = <div>|</div>
+    1.NO.allWrap = |
+    1.NO.linkWrap = <img alt="support icon" src="/fileadmin/user_upload/support-scherlerag.png">|
+}

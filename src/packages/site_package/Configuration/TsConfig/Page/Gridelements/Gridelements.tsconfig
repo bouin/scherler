@@ -1,0 +1,110 @@
+
+# One column – grid element definition
+tx_gridelements.setup.oneColumn {
+    title = Grid One Column
+    description = One column for content
+    flexformDS = FILE:typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/oneColumn.xml
+
+    # Definition of structure in TYPO3 Page module
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Column 1
+                        #colspan = 2
+                        colPos = 101
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Three columns – grid element definition
+tx_gridelements.setup.threeColumns {
+    title = Grid Three Columns
+    description = Three columns
+    flexformDS = FILE:typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/threeColumns.xml
+
+    # Definition of structure in TYPO3 Page module
+    config {
+        colCount = 3
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Column 1
+                        #colspan = 2
+                        colPos = 101
+                    }
+                    2 {
+                        name = Column 2
+                        #colspan = 2
+                        colPos = 102
+                    }
+                    3 {
+                        name = Column 3
+                        #colspan = 2
+                        colPos = 103
+                    }
+                }
+            }
+        }
+    }
+}
+# Three columns – grid element definition
+tx_gridelements.setup.twoColumns {
+    title = Grid Two Columns 1:2
+    description = Two columns
+    flexformDS = FILE:typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/twoColumns.xml
+
+    # Definition of structure in TYPO3 Page module
+    config {
+        colCount = 2
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Column 1
+                        #colspan = 2
+                        colPos = 101
+                    }
+                    2 {
+                        name = Column 2
+                        #colspan = 2
+                        colPos = 102
+                    }
+                }
+            }
+        }
+    }
+}
+
+# One column – grid element definition
+tx_gridelements.setup.oneColumnFull {
+    title = Grid One Column Full Width
+    description = One column for content 100% wide (for Slider)
+    flexformDS = FILE:typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/oneColumn100.xml
+
+    # Definition of structure in TYPO3 Page module
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Column 1
+                        #colspan = 2
+                        colPos = 101
+                    }
+                }
+            }
+        }
+    }
+}

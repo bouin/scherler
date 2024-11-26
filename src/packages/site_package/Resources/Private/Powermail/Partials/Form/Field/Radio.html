@@ -1,0 +1,32 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+
+        <div class="powermail_fieldwrap powermail_fieldwrap_type_radio powermail_fieldwrap_{field.marker} {field.css}  col-12 col-md-4">
+            <div class="bck-light-gray">
+
+                <f:render partial="Form/FieldLabel" arguments="{_all}" />
+                <div class="{settings.styles.framework.fieldWrappingClasses}">
+                    <f:for each="{field.modifiedSettings}" as="setting" iteration="index">
+                        <div class="form-check {settings.styles.framework.radioClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}">
+                            <!--<input class="form-check-input" type="radio" name="powermail_field_{field.marker}" id="powermail_field_{field.marker}_{index.cycle}">-->
+                            <label class="radio-container">
+                                <f:form.radio
+                                        property="{field.marker}"
+                                        value="{setting.value}"
+                                        checked="{vh:misc.prefillMultiField(field:field, mail:mail, cycle:index.cycle)}"
+                                        id="powermail_field_{field.marker}_{index.cycle}"
+                                        additionalAttributes="{vh:validation.validationDataAttribute(field:field, iteration:index)}"
+                                        class="powermail_radio d-none" />
+                                <vh:string.escapeLabels>{setting.label}</vh:string.escapeLabels>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                    </f:for>
+
+                    <f:if condition="{settings.validation.client}">
+                        <div class="powermail_field_error_container powermail_field_error_container_{field.marker}"></div>
+                    </f:if>
+                </div>
+            </div>
+        </div>

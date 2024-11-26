@@ -1,0 +1,31 @@
+
+##################
+# Frontend Plugin
+##################
+plugin.tx_powermail {
+    view {
+        templateRootPaths {
+            30 = EXT:site_package/Resources/Private/Powermail/Templates/
+        }
+        partialRootPaths {
+            30 = EXT:site_package/Resources/Private/Powermail/Partials/
+        }
+        layoutRootPaths {
+            30 = EXT:site_package/Resources/Private/Powermail/Layouts/
+        }
+    }
+}
+
+plugin.tx_gomapsext.settings.apiKey = AIzaSyDFGAHM3RRInibSgfjj9JubNWDuBbFO-zQ
+
+plugin.tx_powermail.settings.setup {
+    styles {
+        numberOfColumns = 2
+        framework {
+            rowClasses = row
+            fieldAndLabelWrappingClasses = form-group col-md-12
+            fieldWrappingClasses = col-sm-12
+            labelClasses = control-label col-12
+        }
+    }
+}

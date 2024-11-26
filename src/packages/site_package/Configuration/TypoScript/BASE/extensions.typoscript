@@ -1,0 +1,122 @@
+# ==============================================
+# FE-Plugin configuration for EXT:mask
+# ==============================================
+plugin.tx_mask {
+    view {
+        layoutRootPath {
+            10 = EXT:site_package/Resources/Private/Mask/Layouts/
+        }
+        partialRootPath {
+            10 = EXT:site_package/Resources/Private/Mask/Partials/
+        }
+        templateRootPathx {
+            10 = EXT:site_package/Resources/Private/Mask/Templates/
+        }
+    }
+}
+
+
+
+
+#NEWS
+plugin.tx_news.settings.cropMaxCharacters = 100
+
+
+# ==============================================
+    # FE-Plugin configuration for EXT:powermail
+# ==============================================
+
+plugin.tx_gomapsext.settings.apiKey = AIzaSyDFGAHM3RRInibSgfjj9JubNWDuBbFO-zQ
+
+
+########################################
+# Searchbox Plugin
+########################################
+lib.searchbox_plugin = COA_INT
+lib.searchbox_plugin {
+    10 < plugin.tx_kesearch_pi1
+
+    # result page
+    10.resultPage = 38
+
+    # CSS file
+    10.cssFile = EXT:ke_search/res/ke_search_pi1.css
+}
+
+
+10.marks {
+
+    LOGO = IMAGE
+    LOGO.file = fileadmin/templates/images-compressed/logo.svg
+
+    #Nav
+    NAV = HMENU
+    NAV {
+        special = directory
+        special.value = 1
+
+        1 = TMENU
+        1.NO = 1
+        1.wrap = <ul class="nav navbar-nav">|</ul>
+        1.NO.allWrap = <li class="nav-item">|</li>
+        1.NO.ATagParams = class="nav-link"
+        1.ACT = 1
+        1.ACT.wrapItemAndSub = <li class="nav-item active">|</li>
+    }
+
+    #Extranet
+    EXTRANET = HMENU
+    EXTRANET {
+        special = list
+        special.value = 36
+        #maxItems = 1
+        1 = TMENU
+        1.NO = 1
+        1.wrap = <div>|</div>
+        1.NO.ATagBeforeWrap = 1
+        1.NO.allWrap = |
+        1.NO.linkWrap = <img src="/fileadmin/user_upload/icon-extranet.png">|
+
+    }
+}
+
+
+
+[!loginUser]
+    #Extranet2
+    # any of these FE-users is logged in
+    # any FE-user is logged in
+    EXTRANET2 = HMENU
+    EXTRANET2 {
+        special = list
+        special.value = 45
+        maxItems = 1
+        1 = TMENU
+        1.NO = 1
+        1.wrap = <div>|</div>
+        1.NO.ATagBeforeWrap = 1
+        1.NO.allWrap = |
+        1.NO.linkWrap = <img src="/fileadmin/user_upload/icon-extranet.png">|
+    }
+
+[end]
+
+#Support
+SUPPORT = HMENU
+SUPPORT {
+    special = list
+    special.value = 54
+    maxItems = 1
+    #begin = 2
+    1 = TMENU
+    1.NO = 1
+    1.NO.ATagBeforeWrap = 1
+    1.wrap = <div>|</div>
+    1.NO.allWrap = |
+    1.NO.linkWrap = <img src="/fileadmin/user_upload/support-scherlerag.png">|
+
+}
+
+
+
+

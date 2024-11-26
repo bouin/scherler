@@ -1,0 +1,27 @@
+
+tt_content.gridelements_pi1 {
+    templateRootPaths.20 = EXT:site_package/Resources/Private/Gridelements/Templates/
+}
+
+tt_content.gridelements_pi1 {
+    dataProcessing {
+        10 {
+            default {
+                options {
+                    resolveFlexFormData = 1
+                    resolveChildFlexFormData = 0
+                }
+            }
+        }
+    }
+}
+
+//Gridlements
+#plugin.tx_gridelements {
+#    templateRootPaths {
+#        10 = EXT:site_package/Resources/Private/Gridelements/Templates/
+#    }
+#    partialRootPaths {
+#        10 = EXT:site_package/Resources/Private/Gridelements/Partials/
+#    }
+#}

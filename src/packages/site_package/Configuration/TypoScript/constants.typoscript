@@ -1,0 +1,67 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+############ NEWS ############
+##############################
+plugin.tx_news {
+    view {
+        templateRootPath = fileadmin/templates/extensions/news/resources/private/Templates/
+        partialRootPath = fileadmin/templates/extensions/news/resources/private/Partials/
+        layoutRootPath = fileadmin/templates/extensions/news/resources/private/Layouts/
+    }
+}
+
+
+
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+       layoutRootPath = EXT:site_package/Resources/Private/Layouts/Page/
+       partialRootPath = EXT:site_package/Resources/Private/Partials/Page/
+       templateRootPath = EXT:site_package/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author = Studio Thom Pfister | Daniel Hackiewicz TYPO3 Developer
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 0
+    prefixLocalAnchors = all
+    headerComment = build by sitepackagebuilder.com | Daniel Hackiewicz TYPO3 Developer
+    sendCacheHeaders = 1
+}
+##############
+### NEWS ###
+##############
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:site_package/Resources/Private/News/Templates/
+        partialRootPath = EXT:site_package/Resources/Private/News/Partials/
+        layoutRootPath = EXT:site_package/Resources/Private/News/Layouts/
+    }
+}

@@ -1,0 +1,23 @@
+
+lib.sitemap = COA
+lib.sitemap {
+    wrap = <ul class="nav-footer-ul">|</ul>
+    10 = HMENU
+    10 {
+
+        1 = TMENU
+        1 {
+            noBlur=1
+            NO = 1
+            NO {
+                allWrap = <li class="nav-footer-item">|</li>
+                ATagParams = class="nav-footer-link"
+            }
+            ACT = 1
+            ACT < .NO
+            ACT {
+                ATagParams = class="nav-footer-link active"
+            }
+        }
+    }
+}

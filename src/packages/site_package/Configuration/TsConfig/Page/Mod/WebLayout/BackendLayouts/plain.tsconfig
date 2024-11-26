@@ -1,0 +1,31 @@
+#
+# BACKENDLAYOUT: Plain
+#
+
+mod {
+    web_layout {
+        BackendLayouts {
+            plain {
+                title = Plain (no menu / no footer)
+                icon = EXT:site_package/Resources/Public/Images/BackendLayouts/default.png
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Center
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

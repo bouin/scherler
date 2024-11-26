@@ -1,0 +1,29 @@
+<section class="three-column {data.flexform_themeSelector} {data.flexform_marginSelector} no-padding" id="{data.flexform_idSelector}">
+    <div class="container">
+        <f:if condition="{data.header}">
+            <f:then>
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h3>{data.header}</h3>
+                    </div>
+                </div>
+            </f:then>
+        </f:if>
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 mb-2">
+                        {data.tx_gridelements_view_column_101->f:format.raw()}
+                    </div>
+                    <div class="col-12 col-md-4 mb-2">
+                        {data.tx_gridelements_view_column_102->f:format.raw()}
+                    </div>
+                    <div class="col-12 col-md-4 mb-2">
+                        {data.tx_gridelements_view_column_103->f:format.raw()}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

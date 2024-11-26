@@ -1,0 +1,31 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        ## Eigene Rahmen fuer Content Elemente
+        frame_class.addItems {
+            bck-white = White background for images
+            bck-blue = Blue background for headlines
+            bck-grey = Gray background for text
+        }
+        #layout {
+        #    removeItems = 1,2,3
+        #    addItems {
+                //4 = Background color home
+                //5 = 1/3 column for Image
+        #}
+        #}
+    }
+}
+
+#tx_news.templateLayouts {
+    #homenews = Home News
+    #homeprojects = Home Projekte
+    #news = List News
+    #projekte = List Projekte
+#}
+

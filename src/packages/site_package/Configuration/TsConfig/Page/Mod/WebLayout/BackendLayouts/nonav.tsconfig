@@ -1,0 +1,31 @@
+#
+# BACKENDLAYOUT: Keine Navigation (aber mit Logo) und kein Footer
+#
+
+mod {
+    web_layout {
+        BackendLayouts {
+            nonav {
+                title = Keine Navigation (aber mit Logo) und kein Footer
+                icon = EXT:site_package/Resources/Public/Images/BackendLayouts/default.png
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Center
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

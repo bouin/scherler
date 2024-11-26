@@ -1,0 +1,11 @@
+#
+# TCEMAIN
+#
+TCEMAIN {
+
+}
+tx_news.templateLayouts {
+
+    1 = List für Blog
+
+}

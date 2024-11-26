@@ -1,0 +1,69 @@
+################
+#### CONFIG ####
+################
+config {
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = (at)
+    absRefPrefix = auto
+    no_cache = 0
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = 0
+    debug = 0
+    cache_period = 31536000
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+    // Disable Cache
+    no_cache = 1
+
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 1
+    compressCss = 1
+    concatenateJs = 0
+    concatenateCss = 0
+
+    //Errors
+
+}
+
+//Google Maps*//
+plugin.tx_gomapsext.settings.apiKey = AIzaSyCGh_x9G079ZVWJcLgTYn7p-sbD2TkzNr0
+
+plugin.tx_news {
+
+    settings{
+
+        overrideFlexformSettingsIfEmpty = cropMaxCharacters,dateField,timeRestriction,orderBy,orderDirection,backPid,listPid,startingpoint,recursive
+        orderBy = datetime
+        orderDirection = desc
+        orderByRespectTopNews = 0
+        orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
+
+        list{
+            paginate {
+                itemsPerPage=4
+                insertBelow=TRUE
+                lessPages=TRUE
+                #forcedNumberOfLinks=3
+                pagesBefore=1
+                pagesAfter=1
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <color>
+                        <label>Color</label>
+                        <config>
+                            <type>select</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">Default</numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Blue-Box</numIndex>
+                                    <numIndex index="1">section-size color-bl radius-section</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </color>
+                    <cssClass>
+                        <label>Klasse</label>
+                        <config>
+                            <type>input</type>
+                            <size>20</size>
+                            <max>30</max>
+                            <eval>trim</eval>
+                        </config>
+                    </cssClass>
+                    <parallaxImage>
+                        <label>Parallax-Bild</label>
+                        <config>
+                            <type>select</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">No Pic</numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Face</numIndex>
+                                    <numIndex index="1">icon-left-face</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">Snowflake</numIndex>
+                                    <numIndex index="1">icon-left-snow</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">Hand</numIndex>
+                                    <numIndex index="1">icon-right-hand</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </parallaxImage>
+                    <padding>
+                        <label>Abstand</label>
+                        <config>
+                            <type>radio</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">Default</numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Kleiner Abstand</numIndex>
+                                    <numIndex index="1">small-padding</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">Kleiner Abstand unten</numIndex>
+                                    <numIndex index="1">small-padding-bottom</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">Kein Abstand oben</numIndex>
+                                    <numIndex index="1">no-padding-top</numIndex>
+                                </numIndex>
+                                <numIndex index="5" type="array">
+                                    <numIndex index="0">Kein Abstand unten</numIndex>
+                                    <numIndex index="1">no-padding-bottom</numIndex>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <numIndex index="0">Kein Abstand</numIndex>
+                                    <numIndex index="1">no-padding</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </padding>
+                    <!--<fadeUp>
+                        <label>Fade Up</label>
+                        <config>
+                            <type>check</type>
+                            <defasult>0</defasult>
+                        </config>
+                    </fadeUp>-->
+                </el>
+            </ROOT>
+</T3DataStructure>

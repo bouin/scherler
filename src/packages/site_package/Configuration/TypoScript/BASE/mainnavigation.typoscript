@@ -1,0 +1,17 @@
+
+######################
+##### SETUP MENU #####
+######################
+
+lib.mainNavigation  =  HMENU
+lib.mainNavigation  {
+    special = directory
+    special.value = 1
+    1 = TMENU
+    1.NO = 1
+    1.wrap = <ul class="nav  navbar-nav">|</ul>
+    1.NO.allWrap = <li class="nav-item">|</li>
+    1.NO.ATagParams = class="nav-link"
+    1.ACT = 1
+    1.ACT.wrapItemAndSub = <li class="nav-item active">|</li>
+}

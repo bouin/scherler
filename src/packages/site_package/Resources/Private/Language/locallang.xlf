@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-02UTC14:15:260">
+        <header>
+            <authorName>Daniel Hackiewicz</authorName>
+            <authorEmail>d.hackiewicz@commix.ch</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="mehrnews">
+                <source>Weiterlesen</source>
+            </trans-unit>
+            <trans-unit id="mehrprojects">
+                <source>Weiterlesen</source>
+            </trans-unit>
+            <trans-unit id="dateFormat">
+                <source>%m.%d.%Y</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-02UTC14:15:260">
+        <header>
+            <authorName>Daniel Hackiewicz</authorName>
+            <authorEmail>d.hackiewicz@commix.ch</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="weiterlesen">
+                <target>Weiterlesen</target>
+            </trans-unit>
+            <trans-unit id="mehrnews">
+                <target>Weiterlesen</target>
+            </trans-unit>
+            <trans-unit id="mehrprojects">
+                <target>Weiterlesen</target>
+            </trans-unit>
+            <trans-unit id="address.1">
+                <target>Fonds Landschaft Schweiz FLS</target>
+            </trans-unit>
+            <trans-unit id="address.2">
+                <target>Thunstrasse 36</target>
+            </trans-unit>
+            <trans-unit id="address.3">
+                <target>3005 Bern</target>
+            </trans-unit>
+            <trans-unit id="tel">
+                <target>Tel.:</target>
+            </trans-unit>
+            <trans-unit id="telnr">
+                <target>031 350 11 50</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <target>info@fls-fsp.ch</target>
+            </trans-unit>
+            <trans-unit id="spendenkonto">
+                <target>Spendenkonto</target>
+            </trans-unit>
+            <trans-unit id="spendenkontonr">
+                <target>IBAN: CH36 0900 0000 3000 0701 5</target>
+            </trans-unit>
+            <trans-unit id="dateFormat">
+                <target>%m. %d. %Y</target>
+            </trans-unit>
+            <trans-unit id="category.1">
+                <target>News</target>
+            </trans-unit>
+            <trans-unit id="category.3">
+                <target>Events</target>
+            </trans-unit>
+            <trans-unit id="archiv">
+                <target>News Archiv</target>
+            </trans-unit>
+            <trans-unit id="moreblog">
+                <target>Alle Blog Artikel</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

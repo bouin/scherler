@@ -1,0 +1,77 @@
+{
+  "name": "danielhackiewicz/typo3",
+  "description": "TYPO3 Page | Made with ♥ – Studio Thom Pfister",
+  "type": "project",
+  "minimum-stability": "stable",
+  "repositories": [
+      {
+        "type": "path",
+        "url": "src/packages/*/"
+      }
+    ],
+  "license": "GPL-2.0-or-later",
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
+  },
+  "authors": [{
+    "name": "Daniel",
+    "email": "dhackiewicz@gmail.com"
+  }],
+  "require": {
+    "typo3/cms-core": "10.4.37",
+    "typo3/cms-lowlevel": "^10.4",
+    "typo3/cms-adminpanel": "10.4.37",
+    "typo3/cms-backend": "10.4.37",
+    "typo3/cms-belog": "10.4.37",
+    "typo3/cms-beuser": "10.4.37",
+    "typo3/cms-extbase": "10.4.37",
+    "typo3/cms-extensionmanager": "10.4.37",
+    "typo3/cms-felogin": "10.4.37",
+    "typo3/cms-filelist": "10.4.37",
+    "typo3/cms-filemetadata": "10.4.37",
+    "typo3/cms-fluid": "10.4.37",
+    "typo3/cms-fluid-styled-content": "10.4.37",
+    "typo3/cms-frontend": "10.4.37",
+    "typo3/cms-impexp": "10.4.37",
+    "typo3/cms-info": "^10.4",
+    "typo3/cms-install": "10.4.37",
+    "typo3/cms-linkvalidator": "^10.4",
+    "typo3/cms-opendocs": "^10.4",
+    "typo3/cms-recycler": "^10.4",
+    "typo3/cms-redirects": "10.4.37",
+    "typo3/cms-reports": "^10.4",
+    "typo3/cms-rte-ckeditor": "10.4.37",
+    "typo3/cms-scheduler": "^10.4",
+    "typo3/cms-seo": "10.4.37",
+    "typo3/cms-setup": "10.4.37",
+    "typo3/cms-sys-note": "10.4.37",
+    "typo3/cms-t3editor": "10.4.37",
+    "typo3/cms-tstemplate": "10.4.37",
+    "typo3/cms-viewpage": "10.4.37",
+    "typo3/cms-workspaces": "10.4.37",
+    "studio/site-package": "dev-main",
+    "t3/dce": "2.7.7",
+    "gridelementsteam/gridelements": "10.4.3",
+    "tpwd/ke_search": "4.1.0",
+    "georgringer/news": "9.1.0",
+    "in2code/powermail": "8.4.1",
+    "friendsoftypo3/typo3db-legacy": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Studio\\SitePackage\\": "src/packages/site_package/Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "public_html"
+    }
+  }
+}

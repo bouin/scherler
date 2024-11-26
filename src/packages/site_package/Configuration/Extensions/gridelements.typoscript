@@ -1,0 +1,76 @@
+### Source: https://coders.care/blog/tutorial/gridelements-and-cms-8/
+
+
+## Initialize GridElements
+tt_content.gridelements_pi1 = COA
+tt_content.gridelements_pi1 {
+  20 = COA
+  20 {
+    10 = USER
+    10 {
+      userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+      setup {
+        default < lib.gridelements.defaultGridSetup
+      }
+    }
+  }
+}
+
+## Custom templates
+tt_content.gridelements_pi1.20.10.setup {
+
+    ## Odwolanie sie do GridElementu zapisanego w bazie danych wg jego ID
+    // 1 < lib.gridelements.defaultGridSetup
+    // 1 {
+    //     cObject = FLUIDTEMPLATE
+    //     cObject {
+    //         file = typo3conf/ext/site_package/Resources/Private/Extensions/gridelements/example.html
+    //     }
+    // }
+    // 2 < lib.gridelements.defaultGridSetup
+    // 2 {
+    //     cObject = FLUIDTEMPLATE
+    //     cObject {
+    //         file = typo3conf/ext/site_package/Resources/Private/Extensions/gridelements/carolbe.html
+    //     }
+    // }
+
+    
+    ## Odwolanie sie do GridElementu zapisanego w pliku po jego unikatowej nazwie
+
+    oneColumn < lib.gridelements.defaultGridSetup
+    oneColumn {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/oneColumn.html
+        }
+    }
+
+    oneColumnFull < lib.gridelements.defaultGridSetup
+    oneColumnFull {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/oneColumn100.html
+        }
+    }
+
+
+    threeColumns < lib.gridelements.defaultGridSetup
+    threeColumns {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/threeColumns.html
+        }
+    }
+
+    twoColumns < lib.gridelements.defaultGridSetup
+    twoColumns {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = typo3conf/ext/site_package/Resources/Private/Gridelements/Templates/twoColumns.html
+        }
+    }
+
+
+
+}
