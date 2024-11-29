@@ -10,6 +10,7 @@ editor:
         stylesSet:
             - { name: "button", element: "a", attributes: { 'class': 'btn btn-primary' } }
             - { name: "button-arrow", element: "a", attributes: { 'class': 'btn-arrow' } }
+            - { name: "text-smaller", element: "p", attributes: { 'class': 'txt-smaller' } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }

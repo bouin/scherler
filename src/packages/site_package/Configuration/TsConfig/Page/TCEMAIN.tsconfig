@@ -5,9 +5,8 @@ TCEMAIN {
 
 }
 tx_news.templateLayouts {
-
-    1 = List für Blog
-
+    1 = List für Referenzen
+    2 = List für Blog
 }
 
 /*

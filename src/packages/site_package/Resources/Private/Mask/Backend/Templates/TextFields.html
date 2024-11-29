@@ -1,0 +1,52 @@
+<f:variable name="bckCol" value="{data.tx_mask_bck_col}"/>
+<section class="bck-{bckCol}">
+    <div class="container pt-80 pb-90">
+        <f:if condition="{data.tx_mask_small_text_left} && {data.header}">
+            <div class="row">
+                <f:if condition="{data.tx_mask_small_text_left}">
+                    <div class="col-12 txt-blue">
+                        <p class="txt-20 txt-blue">{data.tx_mask_small_text_left}</p>
+                    </div>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <div class="col-12 text-center txt-blue pb-30">
+                        <h2>{data.header}</h2>
+                    </div>
+                </f:if>
+            </div>
+        </f:if>
+        <div class="row">
+            <div class="col-12 col-md-8 txt-35 pb-20">
+                <f:if condition="{data.tx_mask_first_big_text}">
+                    <f:format.raw>{data.tx_mask_first_big_text}</f:format.raw>
+                </f:if>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-end">
+            <div class="col-12 col-md-9">
+                <f:if condition="{data.tx_mask_second_big_text}">
+                    <f:format.raw>{data.tx_mask_second_big_text}</f:format.raw>
+                </f:if>
+            </div>
+            <div class="col-0 col-md-1">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-end">
+            <f:if condition="{data.tx_mask_text_on_the_link} && {data.tx_mask_link_undert_text}">
+                <div class="col-12 col-md-9 pt-40 ">
+                    <f:if condition="{data.tx_mask_link_undert_text}">
+                        <f:link.typolink parameter="{data.tx_mask_link_undert_text}" class="btn-arrow no-link">
+                            <f:if condition="{data.tx_mask_text_on_the_link}">
+                                {data.tx_mask_text_on_the_link}
+                            </f:if>
+                        </f:link.typolink>
+                    </f:if>
+                </div>
+                <div class="col-0 col-md-1">
+                </div>
+            </f:if>
+        </div>
+    </div>
+</section>
+
+

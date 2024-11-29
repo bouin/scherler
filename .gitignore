@@ -5,6 +5,8 @@
 !src/
 !src/**
 /node_modules
+/node_modules/
+/node_modules/*
 
 # Allow composer.json (even outside src, if applicable)
 !composer.json
