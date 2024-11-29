@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+        <div id="c{data.uid}" class="section {f:if(condition: '{data.layout}==4',then:'layout-4')} frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-12 col-xl-10 col-xxl-12">
+                        <f:for each="{children_203}" as="record" iteration="iterator">
+                            <f:format.raw>
+                                <div class="row">
+                                    <div class="col-12" >
+                                        {record.renderedContent}
+                                    </div>
+                                </div>
+                            </f:format.raw>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+</html>
+

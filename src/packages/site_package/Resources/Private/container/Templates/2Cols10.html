@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="c{data.uid}" class=" sectionframe frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+    <div class=" padding-top-50 padding-bottom-50">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-5 pb-4 pb-md-0">
+                <f:for each="{children_201}" as="record">
+                    <div class="ce-bodytext">
+                        <f:format.raw>
+                            {record.renderedContent}
+                        </f:format.raw>
+                    </div>
+                </f:for>
+            </div>
+            <div class="col-12 col-md-5 pb-4 pb-md-0">
+                <f:for each="{children_202}" as="record">
+                    <div class="ce-bodytext">
+                        <f:format.raw>
+                            {record.renderedContent}
+                        </f:format.raw>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
+
+

@@ -1,10 +1,16 @@
-# Ignore several upload and file directories.
+# Ignore everything
 *
+
+# Allow everything inside src/
 !src/
 !src/**
+/node_modules
+
+# Allow composer.json (even outside src, if applicable)
 !composer.json
 
-node_modules/
-src/packages/site_package/Resources/Public/Grunt/node_modules/
+# Allow everything inside Build
+!src/packages/site_package/Build/**
 
-
+# Explicitly ignore node_modules inside Build
+src/packages/site_package/Build/node_modules/

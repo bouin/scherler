@@ -8,9 +8,8 @@ editor:
         contentsCss: "EXT:site_package/Resources/Public/Css/rte.css"
 
         stylesSet:
-            - { name: "quote", element: "p", attributes: { 'class': 'quote-blog' } }
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
             - { name: "button", element: "a", attributes: { 'class': 'btn btn-primary' } }
+            - { name: "button-arrow", element: "a", attributes: { 'class': 'btn-arrow' } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }

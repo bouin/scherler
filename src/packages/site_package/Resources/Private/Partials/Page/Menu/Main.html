@@ -1,45 +1,102 @@
 <!-- ###DOKUMENT### begin-->
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5DGRNX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5DGRNX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div id="go-top"></div>
+<f:for each="{cats}" as="category">
+    <f:if condition="{category.data.parent}==0">
+        <f:then></f:then>
+        <f:else>
+            <div class="d-none" data-cat="{category.data.uid}"></div>
+        </f:else>
+    </f:if>
+</f:for>
 
-<div class="container">
-    <nav class="navbar competentia-nav navbar-expand-lg navbar-light">
+<f:if condition="{data.media}">
+    <f:then>
+        <f:for each="{data.media}" as="image">
+            <div class="home-wrapper position-relative {f:if(condition: '{data.uid}==1',then:'',else:'subpage-meister')}" style="background-image: url(fileadmin{image.originalFile.identifier})">
+                <nav class="navbar navbar-expand-lg navbar-light " id="nav-nav-ok">
+                    <div class="container-fluid">
 
-        <a class="navbar-brand" href="/">
-            <img class="img-scherler" src="/typo3conf/ext/site_package/Resources/Public/Images/logo.svg" alt="Scherler AG Logo">
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
-        </button>
+                            <div class="col-8 col-md-4">
+                                <f:link.page pageUid="1" class="navbar-brand no-link">
+                                    <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" alt="Scherler AG Logo"></f:image>
+                                </f:link.page>
+                            </div>
+                            <div class="col-4 col-md-8 d-flex justify-content-end align-items-center menu-end-if-just-do-it">
+                                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <div id="nav-icon" class="mobile-margin">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                    <div class="collapsed-menu w-100">
+                                        <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+                                        <div class="remove-doouble-br padding-left-menu-address visibility-like-mobile email-arrow-beige p-no-margin font-viva-helvetia font-18">
 
+                                                <f:cObject typoscriptObjectPath="lib.adres"></f:cObject>
 
+                                        </div>
+                                        <div class="remove-doouble-br padding-left-menu-address visibility-like-mobile justify-content-end font-viva-helvetia font-18">
+                                            <f:comment>
+                                                <f:cObject typoscriptObjectPath="lib.social"></f:cObject>
+                                            </f:comment>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+                    </div>
+                </nav>
+                <f:if condition="{data.uid}==1">
+                    <div class="position-absolute text-home signet-home d-flex justify-content-center align-items-center">
+                        Innovative Energie <br>
+                        der Zukunft
+                    </div>
+                </f:if>
+            </div>
+        </f:for>
+    </f:then>
+    <f:else>
+            <div class="hi-here-is-no-image position-relative">
+                <nav class="navbar navbar-expand-lg navbar-light " id="nav-nav-ok">
+                    <div class="container-fluid">
 
-            <f:cObject typoscriptObjectPath="lib.mainNavigation" />
+                        <div class="col-8 col-md-4">
+                            <f:link.page pageUid="1" class="navbar-brand no-link">
+                                <f:image src="EXT:site_package/Resources/Public/Images/logo-blue.svg" alt="Scherler AG Logo"></f:image>
+                            </f:link.page>
+                        </div>
+                        <div class="col-4 col-md-8 d-flex justify-content-end align-items-center menu-end-if-just-do-it">
+                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <div id="nav-icon" class="mobile-margin">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                <div class="collapsed-menu w-100">
+                                    <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+                                    <div class="remove-doouble-br padding-left-menu-address visibility-like-mobile email-arrow-beige p-no-margin font-viva-helvetia font-18">
+                                            <f:cObject typoscriptObjectPath="lib.adres"></f:cObject>
+                                    </div>
+                                    <div class="remove-doouble-br padding-left-menu-address visibility-like-mobile justify-content-end font-viva-helvetia font-18">
+                                        <f:comment>
+                                            <f:cObject typoscriptObjectPath="lib.social"></f:cObject>
+                                        </f:comment>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <form method="get" id="form_kesearch_searchfield" name="form_kesearch_searchfield" action="/ergebnisse/">
-                <input type="hidden" name="id" value="38" />
-                <input type="text" id="ke_search_searchfield_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchbegriff" value=""/>
-                <input type="submit" id="ke_search_searchfield_submit" alt="Find" value="Finden" />
-            </form>
-            <div class="extranet">
-
-                <f:cObject typoscriptObjectPath="lib.extranet" />
-                <f:cObject typoscriptObjectPath="lib.support" />
+                    </div>
+                </nav>
 
             </div>
-            <script>
-                var items = document.querySelectorAll('.extranet div');
-                if(items.length == 3) {
-                    items[1].style.display = 'none';
-                }
-            </script>
-        </div>
-    </nav>
-</div>
+    </f:else>
+</f:if>
+

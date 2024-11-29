@@ -1,19 +1,72 @@
-<footer class="gray-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <ul>
-                    <li class="bordered"><span>Scherler AG</span></li>
-                    <li class="bordered"><span>Elektro und Telematik</span></li>
-                    <li class="bordered"><span>Papiermühlestrasse 9</span></li>
-                    <li class="bordered"><span>CH-3000 Bern 22</span></li>
-                    <li class="bordered"><span>Telefon <a href="tel:0041313304111">+41 (0)31 330 41 11</a><span></li>
-                </ul>
-                <p style="font-size: 12px">Konzept, Webdesign und Programmierung <a rel="noreferrer" target="_blank" href="https://studiothompfister.com">Studio Thom Pfister</a> | <a href="/nutzungsbedingungen">Nutzungsbedingungen</a> | <a href="/impressum">Impressum</a> | <a href="/cookies">Cookies</a></p>
+<footer>
+    <div class="highway-to-hell">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 this-is-big-margin-bottom">
+                    <h2>Kontaktieren Sie uns noch heute</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 font-20">
+                    <f:cObject typoscriptObjectPath="lib.footer1"></f:cObject>
+                </div>
+                <div class="col-12 col-md-6 font-20">
+                    <f:cObject typoscriptObjectPath="lib.footer2"></f:cObject>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nice-touch">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <p class="title">Social</p>
+                    <f:cObject typoscriptObjectPath="lib.social"></f:cObject>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <p class="title">Diverses</p>
+                    <f:cObject typoscriptObjectPath="lib.pikett"></f:cObject>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <p class="title">Kontakt</p>
+                    <f:cObject typoscriptObjectPath="lib.adres"></f:cObject>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <p class="title">Menü</p>
+                    <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+                </div>
+            </div>
+        </div>
+        <div class="container padding-huge-footer-top">
+            <div class="row">
+                <div class="col-12">
+                    <f:image src="EXT:site_package/Resources/Public/Images/logo-grey.svg" class="w-100 h-auto" alt="Scherler AG Bern"/>
+                </div>
+            </div>
+        </div>
+        <div class="container font-small pt-5 pb-3">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <f:link.page pageUid="79">Nutzungsbedingungen</f:link.page>
+                    <f:link.page pageUid="80"> | Impressum</f:link.page>
+                    <f:link.page pageUid="81"> | Cookies</f:link.page>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    Copyright <span class="year"></span> © Scherler AG
+                </div>
             </div>
         </div>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const yearSpan = document.querySelector('.year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+</script>
 
 <script type="text/javascript">
     _linkedin_partner_id = "3599108";

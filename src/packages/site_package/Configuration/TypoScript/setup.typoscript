@@ -25,27 +25,33 @@ page {
 
     headerData.47854583 = TEXT
     headerData.47854583.value (
-   <!-- Google Tag Manager -->
-   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-   })(window,document,'script','dataLayer','GTM-T5DGRNX');</script>
-   <!-- End Google Tag Manager -->
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-T5DGRNX');</script>
+       <!-- End Google Tag Manager -->
     )
     headerData.478545833 = TEXT
     headerData.478545833.value (
    <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFQ9HLHQRD"></script>
         <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-      gtag('config', 'G-EFQ9HLHQRD');
+        gtag('config', 'G-EFQ9HLHQRD');
     </script>
     )
+    headerData.478545834 = TEXT
+    headerData.478545834.value (
+        <link rel="stylesheet" href="https://use.typekit.net/jhp3eqa.css">
 
+        <link rel="stylesheet" href="https://use.typekit.net/cij4ezi.css">
+
+    )
 
     headerData.47854583333 = TEXT
     headerData.47854583333.value (
@@ -73,10 +79,6 @@ page {
           <!-- Global site tag (gtag.js) - Google Ads: 801181991 -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-801181991"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-801181991'); </script>
         )
-    
-
-
-
 
     10 = FLUIDTEMPLATE
     10 {
@@ -130,6 +132,20 @@ page {
                 includeSpacer = 1
                 as = mainnavigation
             }
+            30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            30 {
+                if.isTrue.field = categories
+                table = sys_category
+                pidInList = 1
+                selectFields = sys_category.*
+                join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+                where.data = field:uid
+                where.wrap = sys_category_record_mm.uid_foreign = |
+                where = sys_category.parent != 0
+                as = cats
+                fallback = 1  # Dies gibt ein leeres Array zurück, wenn keine Daten gefunden werden
+            }
+
         }
     }
 
@@ -204,16 +220,16 @@ page {
     }
 
     includeCSS {
-        owl = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css
-        owl.external = 1
-        owl2 = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.min.css
-        owl2.external = 1
-        site_package_bt = EXT:site_package/Resources/Public/Css/bootstrap.min.four.css
-        site_package_css = EXT:site_package/Resources/Public/Css/main.min.css
-        ke_search = EXT:site_package/Resources/Public/Css/ke_search.css
+        #owl = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css
+        #owl.external = 1
+        #owl2 = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.min.css
+        #owl2.external = 1
+        site_package_bt = EXT:site_package/Resources/Public/Css/bootstrap.min.css
+        site_package_css = EXT:site_package/Resources/Public/Css/layout.css
+        #ke_search = EXT:site_package/Resources/Public/Css/ke_search.css
         swiper = EXT:site_package/Resources/Public/Css/swiper-bundle.min.css
-        fontfont = https://use.fontawesome.com/releases/v5.1.0/css/all.css
-        fontfont.external = 1
+        #fontfont = https://use.fontawesome.com/releases/v5.1.0/css/all.css
+        #fontfont.external = 1
     }
 
     includeJSLibs {
@@ -221,20 +237,20 @@ page {
     }
 
     includeJS {
-        jquery = EXT:site_package/Resources/Public/JavaScript/jquery-3.4.1.min.js
-        linkedin.excludeFromConcatenation = 1
-        linkedin.disableCompression = 1
+        #jquery = EXT:site_package/Resources/Public/JavaScript/jquery-3.4.1.min.js
+        #linkedin.excludeFromConcatenation = 1
+        #linkedin.disableCompression = 1
     }
 
     includeJSFooterlibs {
-        popper = EXT:site_package/Resources/Public/JavaScript/popper.min.js
-        site_package_bootstrap = EXT:site_package/Resources/Public/JavaScript/bootstrap.four.min.js
+        #popper = EXT:site_package/Resources/Public/JavaScript/popper.min.js
+        site_package_bootstrap = EXT:site_package/Resources/Public/JavaScript/bootstrap.bundle.min.js
         swiper_js = EXT:site_package/Resources/Public/JavaScript/swiper-bundle.min.js
-        owl =  https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js
-        owl.external = 1
+        #owl =  https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js
+        #owl.external = 1
         site_package_app = EXT:site_package/Resources/Public/JavaScript/app.js
-        site_package_app.excludeFromConcatenation = 1
-        site_package_app.disableCompression = 1
+        #site_package_app.excludeFromConcatenation = 1
+        #site_package_app.disableCompression = 0
     }
 
 
@@ -242,11 +258,12 @@ page {
 
 
 
-<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/config.typoscript">
-<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/extensions.typoscript">
-<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/mainnavigation.typoscript">
-<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/extranet.typoscript">
-<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/gridelements.typoscript">
+@import 'EXT:site_package/Configuration/TypoScript/BASE/config.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/container.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/extensions.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/mainnavigation.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/extranet.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/gridelements.typoscript'
 //<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/sitemape.typoscript">
 //<INCLUDE_TYPOSCRIPT:source="FILE:typo3conf/ext/site_package/Configuration/TypoScript/BASE/powermail.typoscript">
 
@@ -263,5 +280,62 @@ plugin.tx_seo {
                 }
             }
         }
+    }
+}
+
+#RECORDS
+
+lib.footer1 = CONTENT
+lib.footer1 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2235
+    }
+}
+lib.footer2 = CONTENT
+lib.footer2 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2236
+    }
+}
+lib.social = CONTENT
+lib.social {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2237
+    }
+}
+lib.pikett = CONTENT
+lib.pikett {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2238
+    }
+}
+lib.adres = CONTENT
+lib.adres {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2239
+    }
+}
+lib.menu = CONTENT
+lib.menu {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 75
+        where = uid = 2240
     }
 }

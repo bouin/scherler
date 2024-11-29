@@ -1,0 +1,132 @@
+#1 COL
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-1col-container < lib.contentElement
+tt_content.b13-1col-container {
+    templateName = 1Col
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 100
+            as = children_100
+        }
+    }
+}
+
+#1 COL 8/10
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-1col-full-container < lib.contentElement
+tt_content.b13-1col-full-container {
+    templateName = 1Col8
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 100
+            as = children_100
+        }
+    }
+}
+
+#1 COL 10/10
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-1col-10-container < lib.contentElement
+tt_content.b13-1col-10-container {
+    templateName = 1Col10
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+
+#1 COL FULL
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-1col-container-full < lib.contentElement
+tt_content.b13-1col-container-full {
+    templateName = 1ColFull
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+#2 COLS
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-2cols-container < lib.contentElement
+tt_content.b13-2cols-container {
+    templateName = 2Cols
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 200
+            as = children_200
+        }
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
+#2 COLS 10/12
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-2cols10-container < lib.contentElement
+tt_content.b13-2cols10-container {
+    templateName = 2Cols10
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 200
+            as = children_200
+        }
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
+#3 COLS
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-3cols-images-container < lib.contentElement
+tt_content.b13-3cols-images-container {
+    templateName = 3Cols
+    templateRootPaths {
+        10 = EXT:site_package/Resources/Private/container/Templates
+    }
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 200
+            as = children_200
+        }
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = children_201
+        }
+        202 = B13\Container\DataProcessing\ContainerProcessor
+        202 {
+            colPos = 202
+            as = children_202
+        }
+    }
+}
+

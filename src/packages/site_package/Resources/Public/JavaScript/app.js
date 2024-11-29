@@ -1,153 +1,137 @@
-
-$('#owl-scherler').owlCarousel({
-    loop: true,
-    margin: 10,
-    animateOut: 'fadeOut',
-    dots:true,
-    responsiveClass: true,
-    dotData: true,
-    dotsData: true,
-    responsive: {
-        0: {
-            items: 1,
-            margin: 0,
-            dots:true,
-            autoplay: true,
-            autoHeight: true,
-            autoplayTimeout: 5500,
-            animateOut: 'fadeOut',
-            smartSpeed: 600
-        }
-    }
-})
-$('a.submen[href*=\\#]:not([href=\\#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        console.log(target);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top - 30
-            }, 800);
-            return false;
-        }
-    }
-});
-
-$('#c345 a[href*=\\#]:not([href=\\#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top - 30
-            }, 800);
-            return false;
-        }
-    }
-});
-$('#collapse-only-here a').click(function() {
-    $(this).text($(this).text() == 'Weniger' ? 'Mehr' : 'Weniger');
-
-});
-
-$(document).ready(function() {
-
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        slidesPerColumn: 1,
-        spaceBetween: 30,
-        touchRatio: 0.2,
-        threshold: 10,
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-                slidesPerView: 2,
-                spaceBetween: 30
-            },
-            // when window width is >= 640px
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 40
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 30
-            }
+ var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    slidesPerColumn: 1,
+    spaceBetween: 30,
+    touchRatio: 0.2,
+    threshold: 10,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
         },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 30
         },
-    });
-
-    $("#go-top").click(function() {
-        $("html,body").animate({ scrollTop: 0 }, 500);
-    });
-
-    $("h1").removeAttr("style");
-
-
-    var t=0; // the height of the highest element (after the function runs)
-    var t_elem;  // the highest element (after the function runs)
-    $('.overlay.handy h2').each(function () {
-
-        $this = $(this);
-        if ( $this.outerHeight() > t ) {
-            t_elem = this;
-            t = $this.outerHeight();
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30
         }
-
-    });
-
-    $('.overlay.handy').css('height', t);
-
-    $(window).resize(function() {
-
-        var t=0; // the height of the highest element (after the function runs)
-        var t_elem;  // the highest element (after the function runs)
-
-        $('.overlay.handy h2').each(function () {
-
-            $this = $(this);
-            if ( $this.outerHeight() > t ) {
-                t_elem = this;
-                t = $this.outerHeight();
-            }
-
-        });
-
-        $('.overlay.handy').css('height', t);
-    });
-
-
-    if($('#c1368 p a').length){
-
-    } else {
-        $('#c1368 p').hide();
-    }
-
-
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });
+ function scrollFunction() {
+     if (window.scrollY > 700) {
+         document.getElementById("nav-nav-ok").classList.add('just-do-it');
+     } else {
+         document.getElementById("nav-nav-ok").classList.remove('just-do-it');
+     }
+ }
+ window.onscroll = function() {
+     scrollFunction()
+ };
 
-$(document).scroll(function() {
-    var position = $(this).scrollTop();
-    if (position > 500) {
-        $("#go-top").show();
-    } else {
-        $("#go-top").hide();
-    }
-});
+ document.addEventListener('DOMContentLoaded', function () {
+     // Handle click on elements with the class "i-want-to-click"
+     document.querySelectorAll('.i-want-to-click').forEach(function (element) {
+         element.addEventListener('click', function () {
+             const openCollapse = document.querySelector('.navbar .collapse.show');
+             if (openCollapse) {
+                 // Bootstrap 5 Collapse API (assuming Bootstrap 5+ is used)
+                 const collapseInstance = bootstrap.Collapse.getInstance(openCollapse);
+                 if (collapseInstance) {
+                     collapseInstance.hide();
+                 }
+             }
+         });
+     });
+
+     // Add or remove 'modal-open' class on body based on collapse state
+     const navbar = document.getElementById('navbarSupportedContent');
+     if (navbar) {
+         navbar.addEventListener('show.bs.collapse', function () {
+             document.body.classList.add('modal-open');
+         });
+
+         navbar.addEventListener('hide.bs.collapse', function () {
+             document.body.classList.remove('modal-open');
+         });
+     }
+ });
+
+
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+     // Function to handle the modal open/closed state based on screen width
+     function handleWindowResize() {
+         const width = window.innerWidth;
+
+         if (width < 992) {
+             if (!document.body.classList.contains('modal-open')) {
+                 document.body.classList.add('closed');
+             }
+             setTimeout(() => {
+                 if (!document.body.classList.contains('modal-open')) {
+                     document.body.classList.remove('closed');
+                 }
+             }, 100);
+         } else {
+             document.body.classList.remove('closed');
+         }
+     }
+
+     // Initial check on page load
+     handleWindowResize();
+
+     // Add event listener for window resize
+     window.addEventListener('resize', handleWindowResize);
+
+     // Handle click on nav links
+     document.querySelectorAll('a.nav-link').forEach(function (link) {
+         link.addEventListener('click', function () {
+             if (document.body.classList.contains('modal-open')) {
+                 document.body.classList.remove('modal-open');
+             }
+         });
+     });
+ });
+
+ // Get the element with the data-cat attribute
+ const catElement = document.querySelector('[data-cat]');
+
+ // Check if the element exists and has a valid data-cat attribute
+ if (catElement) {
+     const categoryId = catElement.getAttribute('data-cat');
+
+     // Define a color map for each category ID
+     const colorMap = {
+         '5': '#F2F3F6',
+         '6': '#F8F7F1',
+         '7': '#ECF5FA',
+         '8': '#D9E7F4'
+     };
+
+     // Set the background color of the body based on the category ID
+     if (colorMap[categoryId]) {
+         document.body.style.backgroundColor = colorMap[categoryId];
+     }
+ }
