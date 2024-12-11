@@ -8,9 +8,11 @@ editor:
         contentsCss: "EXT:site_package/Resources/Public/Css/rte.css"
 
         stylesSet:
-            - { name: "button", element: "a", attributes: { 'class': 'btn btn-primary' } }
+            - { name: "button", element: "a", attributes: { 'class': 'btn btn-primary btn-border' } }
             - { name: "button-arrow", element: "a", attributes: { 'class': 'btn-arrow' } }
             - { name: "text-smaller", element: "p", attributes: { 'class': 'txt-smaller' } }
+            - { name: "text-blue", element: "p", attributes: { 'class': 'txt-blue' } }
+            - { name: "text-lead", element: "p", attributes: { 'class': 'txt-lead' } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }

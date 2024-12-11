@@ -55,10 +55,10 @@
 
 .frame-space-before-extra-large {
   padding-top: 8vw;
+  margin-top: 0px;
   @media screen and (max-width: $sm){
     padding-top: 14vw;
   }
-  margin-top: 0px;
 }
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
@@ -76,6 +76,28 @@
 .pt-70 { padding-top: 70px; }
 .pt-80 { padding-top: 80px; }
 .pt-90 { padding-top: 90px; }
+.ps-10 { padding-left: 10px; }
+.ps-20 { padding-left: 20px; }
+.ps-30 { padding-left: 30px; }
+.ps-40 { padding-left: 40px; }
+.ps-50 { padding-left: 50px; }
+.ps-60 { padding-left: 60px; }
+.ps-70 { padding-left: 70px; }
+.ps-80 { padding-left: 80px; }
+.ps-90 { padding-left: 90px; }
+
+@media (max-width: 560px) {
+  .ps-10 { padding-left: 5px; }
+  .ps-20 { padding-left: 10px; }
+  .ps-30 { padding-left: 15px; }
+  .ps-40 { padding-left: 20px; }
+  .ps-50 { padding-left: 25px; }
+  .ps-60 { padding-left: 30px; }
+  .ps-70 { padding-left: 35px; }
+  .ps-80 { padding-left: 40px; }
+  .ps-90 { padding-left: 45px; }
+}
+
 
 @media (max-width: 560px) {
   .pt-10 { padding-top: 5px; }
@@ -88,6 +110,8 @@
   .pt-80 { padding-top: 40px; }
   .pt-90 { padding-top: 45px; }
 }
+
+
 
 .pb-10 { padding-bottom: 10px; }
 .pb-20 { padding-bottom: 20px; }
@@ -109,4 +133,47 @@
   .pb-70 { padding-bottom: 35px; }
   .pb-80 { padding-bottom: 40px; }
   .pb-90 { padding-bottom: 45px; }
+}
+
+.pe-10 { padding-right: 10px; }
+.pe-20 { padding-right: 20px; }
+.pe-30 { padding-right: 30px; }
+.pe-40 { padding-right: 40px; }
+.pe-50 { padding-right: 50px; }
+.pe-60 { padding-right: 60px; }
+.pe-70 { padding-right: 70px; }
+.pe-80 { padding-right: 80px; }
+.pe-90 { padding-right: 90px; }
+
+@media (max-width: 560px) {
+  .pe-10 { padding-right: 5px; }
+  .pe-20 { padding-right: 10px; }
+  .pe-30 { padding-right: 15px; }
+  .pe-40 { padding-right: 20px; }
+  .pe-50 { padding-right: 25px; }
+  .pe-60 { padding-right: 30px; }
+  .pe-70 { padding-right: 35px; }
+  .pe-80 { padding-right: 40px; }
+  .pe-90 { padding-right: 45px; }
+}
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-50 { margin-bottom: 50px; }
+.mb-60 { margin-bottom: 60px; }
+.mb-70 { margin-bottom: 70px; }
+.mb-80 { margin-bottom: 80px; }
+.mb-90 { margin-bottom: 90px; }
+
+@media (max-width: 560px) {
+  .mb-10 { margin-bottom: 5px; }
+  .mb-20 { margin-bottom: 10px; }
+  .mb-30 { margin-bottom: 15px; }
+  .mb-40 { margin-bottom: 20px; }
+  .mb-50 { margin-bottom: 25px; }
+  .mb-60 { margin-bottom: 30px; }
+  .mb-70 { margin-bottom: 35px; }
+  .mb-80 { margin-bottom: 40px; }
+  .mb-90 { margin-bottom: 45px; }
 }

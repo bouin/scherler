@@ -23,6 +23,13 @@ page {
     typeNum = 0
     shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.png
 
+    bodyTagCObject = COA
+    bodyTagCObject {
+        10 = TEXT
+        10.value = <body class="parent-{field:pid} page-{field:uid}">
+        10.insertData = 1
+    }
+
     headerData.47854583 = TEXT
     headerData.47854583.value (
        <!-- Google Tag Manager -->
@@ -49,7 +56,7 @@ page {
     headerData.478545834.value (
         <link rel="stylesheet" href="https://use.typekit.net/jhp3eqa.css">
     )
-    /*Poppins*/
+    ///*poppins*/
     headerData.47854 = TEXT
     headerData.47854.value (
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,15 +121,15 @@ page {
             ifEmpty = Default
         }
         templateRootPaths {
-            0 = EXT:site_package/Resources/Private/Templates/Page/
+            10 = EXT:site_package/Resources/Private/Templates/Page/
             1 = {$page.fluidtemplate.templateRootPath}
         }
         partialRootPaths {
-            0 = EXT:site_package/Resources/Private/Partials/Page/
+            10 = EXT:site_package/Resources/Private/Partials/Page/
             1 = {$page.fluidtemplate.partialRootPath}
         }
         layoutRootPaths {
-            0 = EXT:site_package/Resources/Private/Layouts/Page/
+            10 = EXT:site_package/Resources/Private/Layouts/Page/
             1 = {$page.fluidtemplate.layoutRootPath}
         }
         dataProcessing {
@@ -341,5 +348,18 @@ lib.menu {
         orderBy = sorting
         pidInList = 75
         where = uid = 2240
+    }
+}
+
+
+#Filter News by Category
+plugin.tx_news.settings.demandClass = GeorgRinger\NewsFilter\Domain\Model\Dto\Demand
+plugin.tx_news {
+    settings {
+        filterCategoriesOrderBy = title
+        filterCategoriesOrderDirection = asc
+
+        filterTagsOrderBy = title
+        filterTagsOrderDirection = asc
     }
 }

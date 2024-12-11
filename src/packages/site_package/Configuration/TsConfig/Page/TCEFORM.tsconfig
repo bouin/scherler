@@ -7,18 +7,27 @@ TCEFORM {
     }
     tt_content {
         ## Eigene Rahmen fuer Content Elemente
-        frame_class.addItems {
-            bck-white = White background for images
-            bck-blue = Blue background for headlines
-            bck-grey = Gray background for text
+        frame_class {
+            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right,none
+            addItems {
+                black-headline = black headline
+            }
         }
-        #layout {
-        #    removeItems = 1,2,3
-        #    addItems {
-                //4 = Background color home
-                //5 = 1/3 column for Image
-        #}
-        #}
+        layout {
+            removeItems = 1,2,3
+            addItems {
+                4 = Blue background
+                5 = Buttons
+                6 = Light blue background
+                7 = Blue / gray background
+                8 = White background
+                9 = Beige background
+                10 = Remove justify content center
+                11 = Small partner images
+                12 = Metal background
+                13 = Make layout less wide 9/12 (for 2 and 3 cols)
+            }
+        }
     }
 }
 

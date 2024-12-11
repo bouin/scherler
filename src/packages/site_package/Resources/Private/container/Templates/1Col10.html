@@ -3,9 +3,9 @@
 <div class="padding-for-containers">
     <div id="c{data.uid}" class="bck-green section frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout} {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
         <div class="container">
-            <div class="row justify-content-center g-0 ">
-                <div class="col-12 col-md-10 padding-top-80 padding-bottom-80">
-                    <f:for each="{children_204}" as="record">
+            <div class="row {f:if(condition: '{data.layout}==10',then:'',else:'justify-content-center')} g-0 ">
+                <div class="col-12 col-md-9 padding-top-80 padding-bottom-80">
+                    <f:for each="{children_100}" as="record">
                         <f:format.raw>
                             {record.renderedContent}
                         </f:format.raw>

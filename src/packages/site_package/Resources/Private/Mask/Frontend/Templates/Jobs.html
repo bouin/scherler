@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class=" mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}" >
+
+        <section class="bck-white">
+            <div class="pt-40 container">
+                <div class="row justify-content-center">
+                    <div class="{f:if(condition: '{data.tx_mask_change_layout_to_1212}',then:'col-12 col-md-9', else:'col-12')} ">
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="col-12 txt-blue pb-20">
+                                    <f:if condition="{data.header}">
+                                        <p class="txt-20">{data.header}</p>
+                                    </f:if>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <f:if condition="{data.tx_mask_lehrstellen_aktivieren}">
+                                    <f:then>
+                                        <div class="col-12 col-md-10 p-0">
+                                            <iframe src="https://www.yousty.ch/de-CH/lehrstellen?widget=ac996a68-bb61-4c20-b363-fc70f997a701" frameborder="0" height="350" width="100%"></iframe>
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{data.tx_mask_jobs_section}">
+                                            <f:for each="{data.tx_mask_jobs_section}" as="data_item">
+                                                <div class="col-12 col-md-10 pb-50">
+                                                    <div class="container p-0">
+                                                        <div class="row">
+                                                            <div class="col-12 d-flex justify-content-between line-bottom align-items-end">
+                                                                <div class="minibeschr pb-10">
+                                                                    <f:if condition="{data_item.tx_mask_kurze_beschr}">
+                                                                        <div class="pb-1">{data_item.tx_mask_kurze_beschr}</div>
+                                                                    </f:if>
+                                                                </div>
+                                                                <div class="joblink txt-black pb-10 ">
+                                                                    <f:if condition="{data_item.tx_mask_jobs_link}">
+                                                                        <f:link.typolink parameter="{data_item.tx_mask_jobs_link}" class="nolink no-link d-flex flex-row align-items-center">
+                                                                            <f:if condition="{data_item.tx_mask_job_title}">
+                                                                                <div class="like-h3 pe-3">{data_item.tx_mask_job_title}</div>
+                                                                                <div class="arrowman pb-1">
+                                                                                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='34.408' height='13.667' viewBox='0 0 34.408 13.667'><path d='M27.586,0l-.858.858L32.1,6.235H0V7.41H32.1l-5.354,5.4.858.858,6.8-6.8V6.8h-.023Z' transform='translate(0 0)'/></svg>" alt="Arrow SVG">
+                                                                                </div>
+                                                                            </f:if>
+                                                                        </f:link.typolink>
+                                                                    </f:if>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </f:for>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</f:spaceless>
+</html>
+
+

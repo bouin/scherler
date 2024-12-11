@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+    <!--Partials/List/Item.html-->
+    <div class="position-relative ref mt-20 col-12 col-md-6 {f:if(condition: '{settings.templateLayout} == 1', then:'ref mt-20')}">
+        <div class="article h-100 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+            <n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="nolink no-link">
+                <f:if condition="{newsItem.mediaPreviews}">
+                    <!-- media preview element -->
+                    <f:then>
+                        <div>
+                            <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                                <f:if condition="{mediaElement.originalResource.type} == 2">
+                                    <f:image image="{mediaElement}" alt="" loading="{settings.list.media.image.lazyLoading}" width="1200c" height="800c" class="w-100 h-auto"/>
+                                </f:if>
+                                <f:if condition="{mediaElement.originalResource.type} == 5">
+                                    <f:image image="{mediaElement}" alt="" loading="{settings.list.media.image.lazyLoading}" maxWidth="1200c" maxHeight="800c" class="w-100 h-auto"/>
+                                </f:if>
+                            </f:alias>
+                        </div>
+                    </f:then>
+                </f:if>
+
+                <div class="textus pt-20 pb-20">
+                    <div class="category txt-14 text-center">
+                        <f:for each="{newsItem.categories}" as="category">
+                           {category.title}
+                        </f:for>
+                    </div>
+                    <div class="pt-40">
+                        <!-- header -->
+                        <div class="header txt-35">
+                            <h3 class="text-center text-uppercase txt-black">
+                                <span itemprop="headline">{newsItem.title}</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- teaser -->
+                    <div class="teaser-text pt-20 txt-20">
+                        <n:removeMediaTags>
+                        <f:if condition="{newsItem.teaser}">
+                            <f:then>
+                                <div itemprop="description" class="text-center"><f:format.html>{newsItem.teaser}</f:format.html></div>
+                            </f:then>
+                            <f:else>
+                                <div itemprop="description" class="text-center"><f:format.html>{newsItem.bodytext}</f:format.html></div>
+                            </f:else>
+                        </f:if>
+                        </n:removeMediaTags>
+                    </div>
+                </div>
+            </n:link>
+        </div>
+            <div class="position-absolute" style="bottom:0px;left: 0; right: 0; ">
+                <div class="container pt-40 w-100">
+                    <div class="row d-flex justify-content-center w-100">
+                        <div class="col-10 col-md-10 textus-line"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</html>

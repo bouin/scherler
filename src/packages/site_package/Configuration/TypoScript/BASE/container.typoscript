@@ -68,40 +68,19 @@ tt_content.b13-2cols-container {
         10 = EXT:site_package/Resources/Private/container/Templates
     }
     dataProcessing {
-        200 = B13\Container\DataProcessing\ContainerProcessor
-        200 {
-            colPos = 200
-            as = children_200
-        }
         201 = B13\Container\DataProcessing\ContainerProcessor
         201 {
             colPos = 201
             as = children_201
+        }
+        202 = B13\Container\DataProcessing\ContainerProcessor
+        202 {
+            colPos = 202
+            as = children_202
         }
     }
 }
 
-#2 COLS 10/12
-// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
-tt_content.b13-2cols10-container < lib.contentElement
-tt_content.b13-2cols10-container {
-    templateName = 2Cols10
-    templateRootPaths {
-        10 = EXT:site_package/Resources/Private/container/Templates
-    }
-    dataProcessing {
-        200 = B13\Container\DataProcessing\ContainerProcessor
-        200 {
-            colPos = 200
-            as = children_200
-        }
-        201 = B13\Container\DataProcessing\ContainerProcessor
-        201 {
-            colPos = 201
-            as = children_201
-        }
-    }
-}
 
 #3 COLS
 // default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
@@ -114,18 +93,18 @@ tt_content.b13-3cols-images-container {
     dataProcessing {
         200 = B13\Container\DataProcessing\ContainerProcessor
         200 {
-            colPos = 200
-            as = children_200
-        }
-        201 = B13\Container\DataProcessing\ContainerProcessor
-        201 {
             colPos = 201
             as = children_201
         }
-        202 = B13\Container\DataProcessing\ContainerProcessor
-        202 {
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
             colPos = 202
             as = children_202
+        }
+        202 = B13\Container\DataProcessing\ContainerProcessor
+        202 {
+            colPos = 203
+            as = children_203
         }
     }
 }

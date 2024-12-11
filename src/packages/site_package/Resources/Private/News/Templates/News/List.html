@@ -8,36 +8,194 @@
 -->
 
 <f:section name="content">
-	<!--TYPO3SEARCH_end-->
-	<f:if condition="{news}">
-		<f:then>
-			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-						</f:for>
-					</f:then>
-					<f:else>
-                        <f:if condition="{settings.list.paginate.insertAbove}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
-                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-                            <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                        </f:for>
-                        <f:if condition="{settings.list.paginate.insertBelow}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
-					</f:else>
-				</f:if>
-			</div>
-		</f:then>
-		<f:else>
-			<div class="no-news-found">
-				<f:translate key="list_nonewsfound" />
-			</div>
-		</f:else>
-	</f:if>
-	<!--TYPO3SEARCH_begin-->
+    <!--TYPO3SEARCH_end-->
+
+    <f:if condition="{settings.templateLayout} == 1">
+            <div class="d-flex justify-content-end">
+                <f:form id="blogme" action="list" section="c2259" object="{extendedVariables.searchDemand}" name="search" class="form-horizontal">
+                    <fieldset class="pb-20">
+                        <div class="d-flex flex-row">
+                            <div class="form-group mb-0">
+                                <div class="select-box">Filter <span><?xml version="1.0" encoding="UTF-8"?><svg id="arrow_elo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.94 217.45"><defs><style>.cls-1{fill:black;stroke-width:0px;}</style></defs><path class="cls-1" d="m192.94,121.2l-12.11-12.11-75.9,75.83V0h-16.59v184.93L12.11,109.35,0,121.46l95.99,95.99h.96v-.32l95.99-95.92Z"/></svg></span></div>
+                                <div class="options">
+                                    <f:for each="{extendedVariables.categories}" as="category">
+                                        <f:if condition="{category.parentcategory.uid}===3">
+                                            <div class="option">
+                                                <f:form.checkbox id="id-{category.uid}" property="filteredCategories" value="{category.uid}"/>
+                                                <label for="id-{category.uid}" class="">
+                                                    {category.title}
+                                                </label>
+                                            </div>
+                                        </f:if>
+                                    </f:for>
+                                </div>
+                            </div>
+                            <f:comment>
+                                <f:form.submit value="Filtern" class="btn btn-primary ms-2" style="width:max-content" />
+                            </f:comment>
+                        </div>
+                    </fieldset>
+                </f:form>
+            </div>
+    </f:if>
+    <f:if condition="{settings.templateLayout} == 5">
+        <div class="d-flex justify-content-end bright-future">
+            <f:form action="list" id="blogme" section="c2240" object="{extendedVariables.searchDemand}" name="search" class="form-horizontal here-2">
+                <fieldset class="pb-20">
+                    <div class="d-flex flex-row">
+                        <div class="form-group mb-0">
+                            <div class="select-box">Filter <span><?xml version="1.0" encoding="UTF-8"?><svg id="arrow_elo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.94 217.45"><defs><style>.cls-1{fill:black;stroke-width:0px;}</style></defs><path class="cls-1" d="m192.94,121.2l-12.11-12.11-75.9,75.83V0h-16.59v184.93L12.11,109.35,0,121.46l95.99,95.99h.96v-.32l95.99-95.92Z"/></svg></span></div>
+                            <div class="options">
+                                <f:for each="{extendedVariables.categories}" as="category">
+                                    <f:if condition="{category.parentcategory.uid}===2">
+                                        <div class="option">
+                                            <f:form.checkbox id="id-{category.uid}" property="filteredCategories" value="{category.uid}"/>
+                                            <label for="id-{category.uid}" class="">
+                                                {category.title}
+                                            </label>
+                                        </div>
+                                    </f:if>
+                                </f:for>
+                            </div>
+                        </div>
+                        <f:comment>
+                            <f:form.submit value="Filtern" class="btn btn-primary ms-2" style="width:max-content" />
+                        </f:comment>
+                    </div>
+                </fieldset>
+            </f:form>
+        </div>
+    </f:if>
+    <f:if condition="{news}">
+        <f:then>
+            <div id="container-to-take">
+                <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                    <div class="container">
+                        <div class="row">
+                            <!-- layout = 1 -->
+                            <f:if condition="{settings.templateLayout} == 1">
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol1" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol1" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                        <f:if condition="{settings.list.paginate.insertBelow}">
+                                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                            <f:if condition="{settings.templateLayout} == 2">
+                                <div class="container pt-20">
+                                    <div class="row">
+                                        <div class="pt-40 pb-20 col-12 col-md-6"><h4>Blog</h4></div>
+                                        <div class="pt-40 pb-20 col-12 col-md-6 d-flex justify-content-end"><f:link.page pageUid="103" class="btn-arrow">Alle Artikel</f:link.page></div>
+                                    </div>
+                                </div>
+                                <!-- layout = 2 -->
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol2" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol2" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                        <f:if condition="{settings.list.paginate.insertBelow}">
+                                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                            <f:if condition="{settings.templateLayout} == 4">
+                                <!-- Default settings -->
+                                <div class="container ps-0 pe-0 pb-40 ">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="line-top"></div>
+                                        </div>
+                                        <div class="col-12 mt-2 pt-2">
+                                            <p>Weitere Blog Artikel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <div class="swiper-slide">
+                                                <f:render partial="List/ItemCol3" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                            </div>
+                                        </f:for>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </f:if>
+                            <f:if condition="{settings.templateLayout} == 0">
+                                <!-- Default settings -->
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/Item" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{settings.list.paginate.insertAbove}">
+                                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                        </f:if>
+                                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/Item" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                        <f:if condition="{settings.list.paginate.insertBelow}">
+                                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                            <!-- layout = 1 -->
+                            <f:if condition="{settings.templateLayout} == 5">
+                                <f:if condition="{settings.hidePagination}">
+                                    <f:then>
+                                        <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol1" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                            <f:render partial="List/ItemCol1" arguments="{newsItem: newsItem, settings: settings, iterator: iterator}" />
+                                        </f:for>
+                                        <f:if condition="{settings.list.paginate.insertBelow}">
+                                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="pt-50"></div>
+            <div id="container-to-take" class="bck-1">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-9 pt-20 pb-90">
+                            <h3>Wir haben keine passende Artikel gefunden.</h3>
+                            <p>Versuchen Sie es erneut.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
 </f:section>
+
 </html>

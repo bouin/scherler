@@ -1,6 +1,44 @@
-
-<section class="lonelyimageus">
-    <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
-        <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto"/>
-    </f:for>
-</section>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}" >
+        <f:if condition="{data.tx_mask_make_the_image_less_wide}">
+            <f:then>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <section class="lonelyimageus">
+                                <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                                    <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto"/>
+                                </f:for>
+                            </section>
+                            <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                                <f:if condition="{file.description}">
+                                    <p class="mt-2 txt-smaller">{file.description}</p>
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <section class="lonelyimageus">
+                    <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                        <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto"/>
+                    </f:for>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                                <f:if condition="{file.description}">
+                                    <p class="mt-2 txt-smaller">{file.description}</p>
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+</f:spaceless>
+</html>

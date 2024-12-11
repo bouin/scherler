@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}" >
+    <div class="container p-0">
+        <div class="row">
+            <f:if condition="{data.tx_mask_gallery_section}">
+                <f:for each="{data.tx_mask_gallery_section}" as="data_item">
+                    <div class="col-12 col-md-6">
+                        <f:for each="{data_item.tx_mask_gallery_item}" as="file">
+                            <f:image image="{file}" width="1200" class="w-100 h-auto {f:if(condition: '{file.description}',then:'mb-2',else:'mb-4')}" />
+                            <p class="mt-0 txt-smaller">{file.description}</p>
+                        </f:for>
+                    </div>
+                </f:for>
+            </f:if>
+        </div>
+    </div>
+    </div>
+</f:spaceless>
+</html>
+

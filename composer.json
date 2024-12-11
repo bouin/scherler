@@ -58,9 +58,10 @@
     "gridelementsteam/gridelements": "12.0.0",
     "georgringer/news": "11.4.2",
     "in2code/powermail": "12.5.0",
-    "sbublies/gridtocontainer": "^12.2",
-    "b13/container": "^3.1",
-    "mask/mask": "^9.0"
+    "b13/container": "2.3.1",
+    "mask/mask": "^9.0",
+    "clickstorm/go-maps-ext": "6.1.1",
+    "georgringer/news-filter": "^2.1"
   },
   "autoload": {
     "psr-4": {

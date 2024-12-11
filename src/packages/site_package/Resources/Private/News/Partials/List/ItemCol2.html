@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="move-btn-arrow position-relative col-12 col-md-6 col-lg-4 {f:if(condition: '{settings.templateLayout} == 1', then:'ref mt-20')}">
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+    <n:link class="thislink linkno nolink no-link no-link-title h-100 d-inline-block position-relative " newsItem="{newsItem}" settings="{settings}" >
+    <div class="pb-70 article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+            <f:if condition="{newsItem.mediaPreviews}">
+                <!-- media preview element -->
+                <f:then>
+                    <div class="">
+                        <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                            <f:if condition="{mediaElement.originalResource.type} == 2">
+                                <f:image class="w-100 h-auto" image="{mediaElement}"  alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" maxWidth="740" maxHeight="556" width="740c" height="556c"/>
+                            </f:if>
+                            <f:if condition="{mediaElement.originalResource.type} == 5">
+                                <f:image class="w-100 h-auto" image="{mediaElement}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" maxWidth="740" maxHeight="556" width="740c" height="556c"/>
+                            </f:if>
+                        </f:alias>
+                    </div>
+                </f:then>
+            </f:if>
+        <div class=" pt-30 ps-10 pe-10">
+            <!-- header -->
+            <div class="header text-center">
+                <h3 class="text-center">
+                    <span itemprop="headline">{newsItem.title}</span>
+                </h3>
+            </div>
+
+            <!-- teaser -->
+            <div class="teaser-text pt-10 text-center">
+                <n:removeMediaTags>
+                    <f:if condition="{newsItem.teaser}">
+                        <f:then>
+                            <div itemprop="description">{newsItem.teaser}</div>
+                        </f:then>
+                        <f:else>
+                            <div itemprop="description">{newsItem.bodytext}</div>
+                        </f:else>
+                    </f:if>
+                </n:removeMediaTags>
+            </div>
+        </div>
+    </div>
+        <f:comment>
+            <div class=" position-absolute" style="bottom: 10px">
+                <div class="btn-arrow">Mehr erfahren</div>
+            </div>
+        </f:comment>
+    </n:link>
+</div>
+</html>

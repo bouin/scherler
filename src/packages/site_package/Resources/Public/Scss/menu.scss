@@ -76,6 +76,11 @@
   background: $two-color;
   background: white;
 }
+.hi-here-is-no-image .navbar-toggler.collapsed #nav-icon span {
+  background: black;
+}
+
+
 .navbar-toggler #nav-icon span {
   display: block;
   position: absolute;
@@ -149,7 +154,7 @@
     left: 0;
     overflow: hidden;
     height: 0px;
-    background: $one-color-light;
+    background: $darkblue;
     z-index: 50;
     width: 100vw;
     transition: all 1s ease-in-out;
@@ -223,7 +228,7 @@
       }
     }
     padding: 1rem 2rem 1rem 7rem;
-    padding: 4rem 2rem;
+    padding: 4rem 1.1rem;
     padding-bottom: 42px;
   }
 
@@ -475,7 +480,7 @@
     padding-top: 0px;
   }
   .navbar {
-    padding-bottom: 3rem;
+    padding-bottom: 15px;
     padding-top: 23px;
     z-index: 9;
   }

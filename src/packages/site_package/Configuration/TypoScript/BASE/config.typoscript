@@ -2,6 +2,8 @@
 #### CONFIG ####
 ################
 config {
+    sys_language_mode = content_fallback
+    sys_language_overlay = hideNonTranslated
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = (at)
     absRefPrefix = auto

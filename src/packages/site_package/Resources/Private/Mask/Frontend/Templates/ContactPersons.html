@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="bckcolor-{data.tx_mask_background_color_elo} mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}" >
+        <div class="container">
+            <f:if condition="{data.tx_mask_text_next_to_the_photo}">
+                <f:then>
+                </f:then>
+                <f:else>
+                    <div class="row {f:if(condition: '{data.tx_mask_make_it_wider}',then:'justify-content-start',else:'justify-content-center')}">
+                        <f:if condition="{data.header}">
+                            <div class="col-12 {f:if(condition: '{data.tx_mask_make_it_wider}',then:'text-left col-md-7 col-lg-6',else:'text-center col-md-6 col-lg-5')} pt-30 pb-40">
+                                <h3 style="color:black">{data.header}</h3>
+                            </div>
+                        </f:if>
+                    </div>
+                </f:else>
+            </f:if>
+
+            <div class="row {f:if(condition: '{data.tx_mask_make_it_wider}',then:'justify-content-center',else:'justify-content-center')}">
+                <f:if condition="{data.tx_mask_section_with_pcontact_persons}">
+                    <f:for each="{data.tx_mask_section_with_pcontact_persons}" as="data_item">
+                        <div class="col-6 col-md-6 {f:if(condition: '{data.tx_mask_make_it_wider}',then:'col-lg-5',else:'col-xl-5')}">
+                                <f:for each="{data_item.tx_mask_image_of_the_person}" as="file">
+                                    <f:image image="{file}" width="800c" height="525c" class="w-100 h-auto" />
+                                </f:for>
+                            <f:if condition="{data.tx_mask_text_next_to_the_photo}">
+                                <f:then>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{data_item.tx_mask_add_text_to_person}">
+                                        <div class="pt-20">
+                                            <f:format.raw>{data_item.tx_mask_add_text_to_person}</f:format.raw>
+                                        </div>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </div>
+                        <f:if condition="{data.tx_mask_text_next_to_the_photo}">
+                            <f:then>
+                                <div class="col-6 col-md-6 {f:if(condition: '{data.tx_mask_make_it_wider}',then:'col-lg-5',else:'col-xl-4')}">
+
+                                        <f:if condition="{data.header}">
+
+                                                <h2>{data.header}</h2>
+
+                                        </f:if>
+                                        <f:if condition="{data_item.tx_mask_add_text_to_person}">
+                                            <div class="pt-20">
+                                                <f:format.raw>{data_item.tx_mask_add_text_to_person}</f:format.raw>
+                                            </div>
+                                        </f:if>
+                                </div>
+                            </f:then>
+                            <f:else>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</f:spaceless>
+</html>
+
+
+

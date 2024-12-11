@@ -4,6 +4,26 @@
     "tables": {
         "tt_content": {
             "elements": {
+                "accordion": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_blackheadline_accordeon"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "accordion",
+                    "label": "Accordion",
+                    "labels": [
+                        "Add accordeon item"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 5
+                },
                 "angebot": {
                     "color": "#000000",
                     "colorOverlay": "#000000",
@@ -40,16 +60,99 @@
                     "shortLabel": "",
                     "sorting": 1
                 },
+                "contact_persons": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_text_next_to_the_photo",
+                        "tx_mask_make_it_wider",
+                        "header",
+                        "tx_mask_background_color_elo",
+                        "tx_mask_section_with_pcontact_persons"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "contact_persons",
+                    "label": "Contact Persons",
+                    "labels": [
+                        "Text on the right side of the photo",
+                        "Full width + photo left, text left",
+                        "",
+                        "Background color",
+                        "Contact Persons"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 9
+                },
+                "gallery": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_gallery_section"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "gallery",
+                    "label": "Gallery",
+                    "labels": [
+                        "Add image to gallery"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 7
+                },
+                "jobs": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_change_layout_to_1212",
+                        "tx_mask_lehrstellen_aktivieren",
+                        "tx_mask_jobs_section"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "jobs",
+                    "label": "Jobs",
+                    "labels": [
+                        "",
+                        "Layout less wide? 10\/12?",
+                        "Lehrstellen aktivieren?",
+                        "Add ne job link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 8
+                },
                 "quote": {
                     "color": "#000000",
                     "colorOverlay": "#000000",
                     "columns": [
+                        "tx_mask_add_lines_before",
                         "header",
                         "tx_mask_quote_image",
                         "tx_mask_quote_ceo_importat"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         "",
                         "",
                         ""
@@ -59,6 +162,7 @@
                     "key": "quote",
                     "label": "Quote",
                     "labels": [
+                        "Add a line before text",
                         "",
                         "Image",
                         "Text"
@@ -70,11 +174,13 @@
                     "color": "#000000",
                     "colorOverlay": "#000000",
                     "columns": [
+                        "tx_mask_make_the_image_less_wide",
                         "header",
                         "tx_mask_image_image_scherlr"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         "",
                         ""
                     ],
@@ -83,26 +189,61 @@
                     "key": "simple_image",
                     "label": "Simple Image",
                     "labels": [
+                        "Add some space left and right",
                         "",
                         "Add image"
                     ],
                     "shortLabel": "",
                     "sorting": 0
                 },
+                "team": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_ansprechtpartner",
+                        "header",
+                        "tx_mask_team_section"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "team",
+                    "label": "Team",
+                    "labels": [
+                        "\u00abAnsprechpartner\u00bb style?",
+                        "Header (optional)",
+                        "Add team member"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 6
+                },
                 "text_fields": {
                     "color": "#000000",
                     "colorOverlay": "#000000",
                     "columns": [
+                        "tx_mask_big_text_biger",
+                        "tx_mask_make_me_h1",
                         "tx_mask_bck_col",
                         "header",
                         "tx_mask_small_text_left",
+                        "tx_mask_small_text_not_blue",
                         "tx_mask_first_big_text",
                         "tx_mask_second_big_text",
                         "tx_mask_text_on_the_link",
-                        "tx_mask_link_undert_text"
+                        "tx_mask_link_undert_text",
+                        "tx_mask_text_next_to_small"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
                         "",
                         "",
                         "",
@@ -116,22 +257,108 @@
                     "key": "text_fields",
                     "label": "Text fields",
                     "labels": [
+                        "All paddings smaller",
+                        "Should I create an H1? (Only one per page)",
                         "Background color",
-                        "Always in the middle",
-                        "Small text left (blue)",
-                        "Bigger Text",
-                        "Text",
+                        "Blue headline",
+                        "Small text left (default: blue)",
+                        "Make the small text black (not blue)",
+                        "Big Text",
+                        "Text under big text",
                         "Text for the link",
-                        "Link"
+                        "Link",
+                        "Text field next to the small headline"
                     ],
                     "shortLabel": "",
                     "sorting": 0
+                },
+                "text_two_columns": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_first_column_text",
+                        "tx_mask_second_column_text_o"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "text_two_columns",
+                    "label": "Two columns (text x 2)",
+                    "labels": [
+                        "First column",
+                        "Second column"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 3
+                },
+                "three_columns": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_image_firts_col",
+                        "tx_mask_image_seond_col",
+                        "tx_mask_image_third_col"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "three_columns",
+                    "label": "Three columns",
+                    "labels": [
+                        "",
+                        "Image first column",
+                        "Image second column",
+                        "Image third column"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 4
                 }
             },
             "sql": {
+                "tx_mask_add_lines_before": {
+                    "tt_content": {
+                        "tx_mask_add_lines_before": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_ansprechtpartner": {
+                    "tt_content": {
+                        "tx_mask_ansprechtpartner": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_background_color_elo": {
+                    "tt_content": {
+                        "tx_mask_background_color_elo": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_bck_col": {
                     "tt_content": {
                         "tx_mask_bck_col": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_big_text_biger": {
+                    "tt_content": {
+                        "tx_mask_big_text_biger": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_blackheadline_accordeon": {
+                    "tt_content": {
+                        "tx_mask_blackheadline_accordeon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_change_layout_to_1212": {
+                    "tt_content": {
+                        "tx_mask_change_layout_to_1212": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_first_big_text": {
@@ -139,14 +366,64 @@
                         "tx_mask_first_big_text": "mediumtext"
                     }
                 },
+                "tx_mask_first_column_text": {
+                    "tt_content": {
+                        "tx_mask_first_column_text": "mediumtext"
+                    }
+                },
+                "tx_mask_gallery_section": {
+                    "tt_content": {
+                        "tx_mask_gallery_section": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_image_firts_col": {
+                    "tt_content": {
+                        "tx_mask_image_firts_col": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_image_image_scherlr": {
                     "tt_content": {
                         "tx_mask_image_image_scherlr": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 },
+                "tx_mask_image_seond_col": {
+                    "tt_content": {
+                        "tx_mask_image_seond_col": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_image_third_col": {
+                    "tt_content": {
+                        "tx_mask_image_third_col": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_jobs_section": {
+                    "tt_content": {
+                        "tx_mask_jobs_section": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_lehrstellen_aktivieren": {
+                    "tt_content": {
+                        "tx_mask_lehrstellen_aktivieren": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_link_undert_text": {
                     "tt_content": {
                         "tx_mask_link_undert_text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_make_it_wider": {
+                    "tt_content": {
+                        "tx_mask_make_it_wider": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_make_me_h1": {
+                    "tt_content": {
+                        "tx_mask_make_me_h1": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_make_the_image_less_wide": {
+                    "tt_content": {
+                        "tx_mask_make_the_image_less_wide": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_quote_ceo_importat": {
@@ -164,14 +441,44 @@
                         "tx_mask_second_big_text": "mediumtext"
                     }
                 },
+                "tx_mask_second_column_text_o": {
+                    "tt_content": {
+                        "tx_mask_second_column_text_o": "mediumtext"
+                    }
+                },
                 "tx_mask_section_with_offer": {
                     "tt_content": {
                         "tx_mask_section_with_offer": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 },
+                "tx_mask_section_with_pcontact_persons": {
+                    "tt_content": {
+                        "tx_mask_section_with_pcontact_persons": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_small_text_left": {
                     "tt_content": {
                         "tx_mask_small_text_left": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_small_text_not_blue": {
+                    "tt_content": {
+                        "tx_mask_small_text_not_blue": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_team_section": {
+                    "tt_content": {
+                        "tx_mask_team_section": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_text_next_to_small": {
+                    "tt_content": {
+                        "tx_mask_text_next_to_small": "mediumtext"
+                    }
+                },
+                "tx_mask_text_next_to_the_photo": {
+                    "tt_content": {
+                        "tx_mask_text_next_to_the_photo": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_text_on_the_link": {
@@ -194,6 +501,68 @@
                     "fullKey": "header",
                     "key": "header",
                     "type": "string"
+                },
+                "tx_mask_add_lines_before": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_add_lines_before",
+                    "key": "add_lines_before",
+                    "type": "check"
+                },
+                "tx_mask_ansprechtpartner": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_ansprechtpartner",
+                    "key": "ansprechtpartner",
+                    "type": "check"
+                },
+                "tx_mask_background_color_elo": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "Choose background color",
+                                "value": "0"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "Light blue",
+                                "value": "1"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "Light Blue 2",
+                                "value": "2"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "White",
+                                "value": "3"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_background_color_elo",
+                    "key": "background_color_elo",
+                    "type": "select"
                 },
                 "tx_mask_bck_col": {
                     "config": {
@@ -246,6 +615,52 @@
                     "key": "bck_col",
                     "type": "select"
                 },
+                "tx_mask_big_text_biger": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_big_text_biger",
+                    "key": "big_text_biger",
+                    "type": "check"
+                },
+                "tx_mask_blackheadline_accordeon": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_blackheadline_accordeon",
+                    "key": "blackheadline_accordeon",
+                    "type": "inline"
+                },
+                "tx_mask_change_layout_to_1212": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_change_layout_to_1212",
+                    "key": "change_layout_to_1212",
+                    "type": "check"
+                },
                 "tx_mask_first_big_text": {
                     "config": {
                         "enableRichtext": 1,
@@ -254,6 +669,65 @@
                     "fullKey": "tx_mask_first_big_text",
                     "key": "first_big_text",
                     "type": "richtext"
+                },
+                "tx_mask_first_column_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_first_column_text",
+                    "key": "first_column_text",
+                    "type": "richtext"
+                },
+                "tx_mask_gallery_section": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_gallery_section",
+                    "key": "gallery_section",
+                    "type": "inline"
+                },
+                "tx_mask_image_firts_col": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image_firts_col",
+                    "imageoverlayPalette": 1,
+                    "key": "image_firts_col",
+                    "type": "file"
                 },
                 "tx_mask_image_image_scherlr": {
                     "config": {
@@ -277,6 +751,87 @@
                     "key": "image_image_scherlr",
                     "type": "file"
                 },
+                "tx_mask_image_seond_col": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image_seond_col",
+                    "imageoverlayPalette": 1,
+                    "key": "image_seond_col",
+                    "type": "file"
+                },
+                "tx_mask_image_third_col": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image_third_col",
+                    "imageoverlayPalette": 1,
+                    "key": "image_third_col",
+                    "type": "file"
+                },
+                "tx_mask_jobs_section": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_jobs_section",
+                    "key": "jobs_section",
+                    "type": "inline"
+                },
+                "tx_mask_lehrstellen_aktivieren": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_lehrstellen_aktivieren",
+                    "key": "lehrstellen_aktivieren",
+                    "type": "check"
+                },
                 "tx_mask_link_undert_text": {
                     "config": {
                         "nullable": 0,
@@ -285,6 +840,33 @@
                     "fullKey": "tx_mask_link_undert_text",
                     "key": "link_undert_text",
                     "type": "link"
+                },
+                "tx_mask_make_it_wider": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_make_it_wider",
+                    "key": "make_it_wider",
+                    "type": "check"
+                },
+                "tx_mask_make_me_h1": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_make_me_h1",
+                    "key": "make_me_h1",
+                    "type": "check"
+                },
+                "tx_mask_make_the_image_less_wide": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_make_the_image_less_wide",
+                    "key": "make_the_image_less_wide",
+                    "type": "check"
                 },
                 "tx_mask_quote_ceo_importat": {
                     "config": {
@@ -326,6 +908,15 @@
                     "key": "second_big_text",
                     "type": "richtext"
                 },
+                "tx_mask_second_column_text_o": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_second_column_text_o",
+                    "key": "second_column_text_o",
+                    "type": "richtext"
+                },
                 "tx_mask_section_with_offer": {
                     "config": {
                         "appearance": {
@@ -354,6 +945,34 @@
                     "key": "section_with_offer",
                     "type": "inline"
                 },
+                "tx_mask_section_with_pcontact_persons": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_section_with_pcontact_persons",
+                    "key": "section_with_pcontact_persons",
+                    "type": "inline"
+                },
                 "tx_mask_small_text_left": {
                     "config": {
                         "nullable": 0,
@@ -363,6 +982,61 @@
                     "key": "small_text_left",
                     "type": "string"
                 },
+                "tx_mask_small_text_not_blue": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_small_text_not_blue",
+                    "key": "small_text_not_blue",
+                    "type": "check"
+                },
+                "tx_mask_team_section": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_team_section",
+                    "key": "team_section",
+                    "type": "inline"
+                },
+                "tx_mask_text_next_to_small": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text_next_to_small",
+                    "key": "text_next_to_small",
+                    "type": "richtext"
+                },
+                "tx_mask_text_next_to_the_photo": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_text_next_to_the_photo",
+                    "key": "text_next_to_the_photo",
+                    "type": "check"
+                },
                 "tx_mask_text_on_the_link": {
                     "config": {
                         "nullable": 0,
@@ -370,6 +1044,155 @@
                     },
                     "fullKey": "tx_mask_text_on_the_link",
                     "key": "text_on_the_link",
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_blackheadline_accordeon": {
+            "sql": {
+                "tx_mask_ein_bischen_text": {
+                    "tx_mask_blackheadline_accordeon": {
+                        "tx_mask_ein_bischen_text": "mediumtext"
+                    }
+                },
+                "tx_mask_ein_titel_super": {
+                    "tx_mask_blackheadline_accordeon": {
+                        "tx_mask_ein_titel_super": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_link_for_accor": {
+                    "tx_mask_blackheadline_accordeon": {
+                        "tx_mask_link_for_accor": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_ein_bischen_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_ein_bischen_text",
+                    "inlineParent": "tx_mask_blackheadline_accordeon",
+                    "key": "ein_bischen_text",
+                    "label": "Text",
+                    "order": 3,
+                    "type": "richtext"
+                },
+                "tx_mask_ein_titel_super": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_ein_titel_super",
+                    "inlineParent": "tx_mask_blackheadline_accordeon",
+                    "key": "ein_titel_super",
+                    "label": "Titel",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_link_for_accor": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_link_for_accor",
+                    "inlineParent": "tx_mask_blackheadline_accordeon",
+                    "key": "link_for_accor",
+                    "label": "Link (link prevents the opening function)",
+                    "order": 2,
+                    "type": "link"
+                }
+            }
+        },
+        "tx_mask_gallery_section": {
+            "sql": {
+                "tx_mask_gallery_item": {
+                    "tx_mask_gallery_section": {
+                        "tx_mask_gallery_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_gallery_item": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_gallery_item",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_gallery_section",
+                    "key": "gallery_item",
+                    "order": 1,
+                    "type": "file"
+                }
+            }
+        },
+        "tx_mask_jobs_section": {
+            "sql": {
+                "tx_mask_job_title": {
+                    "tx_mask_jobs_section": {
+                        "tx_mask_job_title": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_jobs_link": {
+                    "tx_mask_jobs_section": {
+                        "tx_mask_jobs_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_kurze_beschr": {
+                    "tx_mask_jobs_section": {
+                        "tx_mask_kurze_beschr": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_job_title": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_job_title",
+                    "inlineParent": "tx_mask_jobs_section",
+                    "key": "job_title",
+                    "label": "Job title",
+                    "order": 3,
+                    "type": "string"
+                },
+                "tx_mask_jobs_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_jobs_link",
+                    "inlineParent": "tx_mask_jobs_section",
+                    "key": "jobs_link",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "link"
+                },
+                "tx_mask_kurze_beschr": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_kurze_beschr",
+                    "inlineParent": "tx_mask_jobs_section",
+                    "key": "kurze_beschr",
+                    "label": "Beschreibung (Lehrdauer \/ Job)",
+                    "order": 2,
                     "type": "string"
                 }
             }
@@ -398,12 +1221,22 @@
                 },
                 "tx_mask_offer_item_title": {
                     "tx_mask_section_with_offer": {
-                        "tx_mask_offer_item_title": "mediumtext"
+                        "tx_mask_offer_item_title": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
                 "tx_mask_second_subtitle": {
                     "tx_mask_section_with_offer": {
                         "tx_mask_second_subtitle": "mediumtext"
+                    }
+                },
+                "tx_mask_three": {
+                    "tx_mask_section_with_offer": {
+                        "tx_mask_three": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_tx_mask_offer_item_title_two": {
+                    "tx_mask_section_with_offer": {
+                        "tx_mask_tx_mask_offer_item_title_two": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 }
             },
@@ -417,7 +1250,7 @@
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "fifth_subtitle",
                     "label": "5. Subtitle",
-                    "order": 6,
+                    "order": 8,
                     "type": "richtext"
                 },
                 "tx_mask_first_subtitle": {
@@ -429,7 +1262,7 @@
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "first_subtitle",
                     "label": "First Subtitle",
-                    "order": 3,
+                    "order": 5,
                     "type": "richtext"
                 },
                 "tx_mask_fourth_subtitle": {
@@ -441,7 +1274,7 @@
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "fourth_subtitle",
                     "label": "Fourth Subtitle",
-                    "order": 5,
+                    "order": 7,
                     "type": "richtext"
                 },
                 "tx_mask_linkman": {
@@ -454,20 +1287,20 @@
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "linkman",
                     "label": "Top category link",
-                    "order": 1,
+                    "order": 4,
                     "type": "link"
                 },
                 "tx_mask_offer_item_title": {
                     "config": {
-                        "enableRichtext": 1,
-                        "type": "text"
+                        "nullable": 0,
+                        "type": "input"
                     },
                     "fullKey": "tx_mask_offer_item_title",
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "offer_item_title",
-                    "label": "Title ",
-                    "order": 2,
-                    "type": "richtext"
+                    "label": "Title No2",
+                    "order": 1,
+                    "type": "string"
                 },
                 "tx_mask_second_subtitle": {
                     "config": {
@@ -478,8 +1311,137 @@
                     "inlineParent": "tx_mask_section_with_offer",
                     "key": "second_subtitle",
                     "label": "Second Subtitle",
-                    "order": 4,
+                    "order": 6,
                     "type": "richtext"
+                },
+                "tx_mask_three": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_three",
+                    "inlineParent": "tx_mask_section_with_offer",
+                    "key": "three",
+                    "label": "Title No3",
+                    "order": 3,
+                    "type": "string"
+                },
+                "tx_mask_tx_mask_offer_item_title_two": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_tx_mask_offer_item_title_two",
+                    "inlineParent": "tx_mask_section_with_offer",
+                    "key": "tx_mask_offer_item_title_two",
+                    "label": "Title No2",
+                    "order": 2,
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_section_with_pcontact_persons": {
+            "sql": {
+                "tx_mask_add_text_to_person": {
+                    "tx_mask_section_with_pcontact_persons": {
+                        "tx_mask_add_text_to_person": "mediumtext"
+                    }
+                },
+                "tx_mask_image_of_the_person": {
+                    "tx_mask_section_with_pcontact_persons": {
+                        "tx_mask_image_of_the_person": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_add_text_to_person": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_add_text_to_person",
+                    "inlineParent": "tx_mask_section_with_pcontact_persons",
+                    "key": "add_text_to_person",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_image_of_the_person": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image_of_the_person",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_section_with_pcontact_persons",
+                    "key": "image_of_the_person",
+                    "label": "Add Image",
+                    "order": 1,
+                    "type": "file"
+                }
+            }
+        },
+        "tx_mask_team_section": {
+            "sql": {
+                "tx_mask_about_team_member": {
+                    "tx_mask_team_section": {
+                        "tx_mask_about_team_member": "mediumtext"
+                    }
+                },
+                "tx_mask_team_member_section_foto": {
+                    "tx_mask_team_section": {
+                        "tx_mask_team_member_section_foto": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_about_team_member": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_about_team_member",
+                    "inlineParent": "tx_mask_team_section",
+                    "key": "about_team_member",
+                    "label": "Team member text",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_team_member_section_foto": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_team_member_section_foto",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_team_section",
+                    "key": "team_member_section_foto",
+                    "label": "Team member photo",
+                    "order": 1,
+                    "type": "file"
                 }
             }
         }

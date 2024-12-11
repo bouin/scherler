@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-7">
+            <f:if condition="{data.tx_mask_blackheadline_accordeon}">
+                <div class="accordion accordion-flush" id="accordionFlushSherler">
+                    <f:for each="{data.tx_mask_blackheadline_accordeon}" as="data_item">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+
+                                    <f:if condition="{data_item.tx_mask_link_for_accor}">
+                                        <f:then>
+                                            <f:link.typolink parameter="{data_item.tx_mask_link_for_accor}">
+                                                <button class="accordion-button collapsed movingarrow" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{data_item.uid}" aria-expanded="false" aria-controls="flush-collapse{data_item.uid}">
+                                                    <f:if condition="{data_item.tx_mask_ein_titel_super}">
+                                                        {data_item.tx_mask_ein_titel_super}
+                                                    </f:if>
+                                                </button>
+                                            </f:link.typolink>
+                                        </f:then>
+                                        <f:else>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{data_item.uid}" aria-expanded="false" aria-controls="flush-collapse{data_item.uid}">
+                                                <f:if condition="{data_item.tx_mask_ein_titel_super}">
+                                                    {data_item.tx_mask_ein_titel_super}
+                                                </f:if>
+                                            </button>
+                                        </f:else>
+
+                                    </f:if>
+
+
+                            </h2>
+                            <f:if condition="{data_item.tx_mask_link_for_accor}">
+                                <f:then></f:then>
+                                <f:else>
+                                    <div id="flush-collapse{data_item.uid}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSherler">
+                                        <div class="accordion-body">
+                                            <f:if condition="{data_item.tx_mask_ein_bischen_text}">
+                                                <f:format.raw>{data_item.tx_mask_ein_bischen_text}</f:format.raw>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </f:else>
+                            </f:if>
+
+                        </div>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+

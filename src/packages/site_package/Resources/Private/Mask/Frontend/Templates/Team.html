@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="pt-40 {f:if(condition: '{data.tx_mask_ansprechtpartner}',then:'pb-40 bck-light-blue')} mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}" >
+        <f:if condition="{data.tx_mask_ansprechtpartner}">
+            <f:then>
+                <f:if condition="{data.tx_mask_team_section}">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-9 text-center pt-20 pb-30">
+                                <h3>{data.header}</h3>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <div class="container p-0">
+                                    <div class="row txt-17">
+                                        <f:for each="{data.tx_mask_team_section}" as="data_item">
+                                            <div class="col-12 col-md-6 mb-20">
+                                                <f:for each="{data_item.tx_mask_team_member_section_foto}" as="file">
+                                                    <f:image image="{file}" width="750c" height="500c" class="w-100 h-auto" />
+                                                </f:for>
+                                                <div class="txte pt-10">
+                                                    <f:if condition="{data_item.tx_mask_about_team_member}">
+                                                        <f:format.raw>{data_item.tx_mask_about_team_member}</f:format.raw>
+                                                    </f:if>
+                                                </div>
+                                            </div>
+                                        </f:for>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:if condition="{data.tx_mask_team_section}">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-9">
+                                <div class="container p-0">
+                                    <div class="row txt-17">
+                                        <f:for each="{data.tx_mask_team_section}" as="data_item">
+                                            <div class="col-12 col-md-6 col-lg-4 mb-20">
+                                                <f:for each="{data_item.tx_mask_team_member_section_foto}" as="file">
+                                                    <f:image image="{file}" width="750c" height="950c" class="w-100 h-auto" />
+                                                </f:for>
+                                                <div class="txte pt-10">
+                                                    <f:if condition="{data_item.tx_mask_about_team_member}">
+                                                        <f:format.raw>{data_item.tx_mask_about_team_member}</f:format.raw>
+                                                    </f:if>
+                                                </div>
+                                            </div>
+                                        </f:for>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </f:if>
+            </f:else>
+        </f:if>
+
+    </div>
+</f:spaceless>
+</html>
+
+
