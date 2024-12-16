@@ -1,21 +1,28 @@
 <footer>
-    <div class="highway-to-hell">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 this-is-big-margin-bottom">
-                    <h2>Kontaktieren Sie uns noch heute</h2>
+    <f:if condition="{data.uid}==12">
+        <f:then>
+
+        </f:then>
+        <f:else>
+            <div class="highway-to-hell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 this-is-big-margin-bottom">
+                            <h2>Kontaktieren Sie uns noch heute</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <f:cObject typoscriptObjectPath="lib.footer1"></f:cObject>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <f:cObject typoscriptObjectPath="lib.footer2"></f:cObject>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <f:cObject typoscriptObjectPath="lib.footer1"></f:cObject>
-                </div>
-                <div class="col-12 col-md-6">
-                    <f:cObject typoscriptObjectPath="lib.footer2"></f:cObject>
-                </div>
-            </div>
-        </div>
-    </div>
+        </f:else>
+    </f:if>
     <div class="nice-touch">
         <div class="container">
             <div class="row">
@@ -46,12 +53,12 @@
         </div>
         <div class="container font-small pt-5 pb-3">
             <div class="row">
-                <div class="col-12 col-md-4 txt-small">
+                <div class="col-12 col-lg-4 txt-small d-flex justify-content-center justify-content-lg-start footerbabys pb-10">
                     <f:link.page pageUid="79">Nutzungsbedingungen</f:link.page>
-                    <f:link.page pageUid="80"> | Impressum</f:link.page>
-                    <f:link.page pageUid="81"> | Cookies</f:link.page>
+                    <f:link.page pageUid="80">Impressum</f:link.page>
+                    <f:link.page pageUid="81">Cookies</f:link.page>
                 </div>
-                <div class="col-12 col-md-4 text-center txt-small">
+                <div class="col-12 col-lg-4 text-center txt-small pb-10">
                     Copyright <span class="year"></span> © Scherler AG
                 </div>
             </div>

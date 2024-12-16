@@ -7,9 +7,21 @@
                     <div class="row">
                         <div class="col-12">
                             <section class="lonelyimageus">
-                                <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
-                                    <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto"/>
-                                </f:for>
+                                <f:if condition="{data.tx_mask_add_image_handy_hochformat}">
+                                    <f:then>
+                                        <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                                            <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto d-none d-md-block"/>
+                                        </f:for>
+                                        <f:for each="{data.tx_mask_add_image_handy_hochformat}" as="filetwo">
+                                            <f:image image="{filetwo}" width="800" class="w-100 h-auto handyVersion d-block d-md-none" />
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                                            <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto elo"/>
+                                        </f:for>
+                                    </f:else>
+                                </f:if>
                             </section>
                             <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
                                 <f:if condition="{file.description}">
@@ -21,11 +33,21 @@
                 </div>
             </f:then>
             <f:else>
-                <section class="lonelyimageus">
-                    <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
-                        <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto"/>
-                    </f:for>
-                </section>
+                <f:if condition="{data.tx_mask_add_image_handy_hochformat}">
+                    <f:then>
+                        <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                            <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto d-none d-md-block"/>
+                        </f:for>
+                        <f:for each="{data.tx_mask_add_image_handy_hochformat}" as="filetwo">
+                            <f:image image="{filetwo}" width="800" class="w-100 h-auto handyVersion d-block d-md-none" />
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:for each="{data.tx_mask_image_image_scherlr}" as="file">
+                            <f:image image="{file}" width="1920c" height="800c" class="w-100 h-auto elo"/>
+                        </f:for>
+                    </f:else>
+                </f:if>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">

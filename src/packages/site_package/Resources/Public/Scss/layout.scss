@@ -93,12 +93,20 @@ ul.nav.navbar-nav {
 .navbar-nav {
   margin-right: 10px !important;
 }
-.nav-item a.nav-link {
-  font-size: 17px;
-  padding: 6px 15px 2px 15px!important;
-  border-radius: 30px !important;
-  margin-right: 3px;
-  margin-left: 3px;
+
+.nav-item {
+  &:last-of-type {
+    a.nav-link {
+
+    }
+  }
+  a.nav-link {
+    font-size: 17px;
+    padding: 6px 15px 2px 15px!important;
+    border-radius: 30px !important;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
 }
 .modal-open .navbar-light .navbar-nav .nav-link {
   font-size: 16px !important;
@@ -242,7 +250,10 @@ p.title {
   border-top: 1px solid black;
   padding-top: 8px;
   margin-top: 20px;
-  padding-bottom: 40px
+  padding-bottom: 40px;
+  @media (max-width: $md){
+    padding-bottom: 20px
+  }
 }
 .nice-touch {
   padding-top: 30px;
@@ -427,7 +438,8 @@ footer {
 .page-76 .article {
   &:hover {
     transition: $trans;
-    background: #C0DBEE;
+    background: $lightblue4;
+    background: #e4e2cb;
   }
 }
 .page-103 .article {
@@ -445,7 +457,7 @@ footer {
 
 }
 .article:hover .header h3 span {
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
 }
 .article:hover .header h3 {
   /*width: 100%; !* Expand to full width *!
@@ -496,8 +508,10 @@ hr {
   }
   ul {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     li {
+      margin-bottom: 5px;
       list-style: none !important;
       padding: 6px 15px 2px 15px !important;
       border-radius: 30px !important;
@@ -642,6 +656,10 @@ em {
 .bigger-text p{
   padding-right: 8vw;
 }
+.bigger-text h1{
+  padding-right: 8vw;
+}
+
 .ce-gallery img {
   width: 100% !important;
   height: auto !important;
@@ -763,11 +781,14 @@ textarea::placeholder {
   border-bottom: 1px solid black
 }
 .like-h3 {
-  font-size: 27px
+  font-size: 27px;
+  @media (max-width: $md){
+    font-size: 21px
+  }
 }
 .joblink:hover .arrowman img {
   transform: translateX(10px); /* Move left by 10px */
-  transition: transform 0.3s ease; /* Smooth animation */
+  transition: transform 0.3s linear; /* Smooth animation */
 }
 .txt-small, .txt-small * {
   font-size: 13px !important;
@@ -1113,9 +1134,10 @@ input[type='radio']:checked:after {
   border-radius: 5px;
   width: 100%;
   margin-top: 5px;
-  max-height: 28vw;
-  overflow-y: auto;
+  max-height: 55vw;
+  overflow-y: scroll;
   padding: 10px;
+  //overflow: scroll;
 }
 
 .form-group .options .option {
@@ -1206,5 +1228,111 @@ input[type='radio']:checked:after {
 .bright-future {
   .form-group .options {
     background: #f8f7f1;
+  }
+}
+span.true {
+  height: 9px;
+  width: 9px;
+  background-color: #0082CA;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulsate 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+span.false {
+  height: 9px;
+  width: 9px;
+  background-color: slategrey;
+  border-radius: 50%;
+  display: inline-block;
+}
+.class1 {
+  font-size:12px;
+  margin-right:7px;
+  &:last-of-type {
+    margin-right:0px;
+  }
+}
+.job-box {
+  display: block; /* Ensure job-box is treated as a block element */
+}
+
+.job-box {
+  display: block; /* Ensure job-box is treated as a block element */
+}
+
+.first-line {
+  display: flex;       /* This keeps minibeschr and joblink in a row */
+  justify-content: space-between; /* Adjust alignment as needed */
+  width: 100%;
+}
+.rest-of-data {
+  width: 100%;         /* Ensure it takes full width */
+  display: flex;      /* Ensure it is a block element */
+  flex-direction: row;
+  padding-bottom: 20px;
+  justify-content: end;
+}
+textarea:focus, input:focus {
+    color: $blue;
+}
+.powermail_radio {
+  width: max-content !important;
+}
+
+#nav-nav-ok {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.frame-type-text header {
+  padding-bottom: 15px
+}
+.footerbabys a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.news .article .teaser-text {
+  @media (max-width: $sm){
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+.header h3{
+  @media (max-width: $sm){
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+.thisistitle.has-selection span {
+  width: 12px !important;
+  height: 12px !important;
+  background: $blue;
+  display: block;
+  border-radius: 30px;
+  margin-right: 5px;
+  margin-top: 4px;
+  transition: $trans;
+}
+.thisistitle {
+  display: flex;
+  flex-direction: row;
+  span {
+    width: 0px !important;
+    height: 12px !important;
+    margin-right: 0px;
   }
 }

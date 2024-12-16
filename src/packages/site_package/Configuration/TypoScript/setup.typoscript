@@ -363,3 +363,87 @@ plugin.tx_news {
         filterTagsOrderDirection = asc
     }
 }
+#/*Sitemap SEO*/
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                pages {
+                    config {
+                        #excludedDoktypes = 3, 4, 6, 7, 199, 254, 255, 137, 138
+                        additionalWhere = AND ({#no_index} = 0 OR {#no_follow} = 0)
+                        #rootPage = <optionally specify a different root page. (default: rootPageId from site configuration)>
+                        #excludePagesRecursive = <comma-separated list of page IDs>
+                    }
+                }
+            }
+        }
+    }
+}
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                blog {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    #provider = GeorgRinger\News\Seo\NewsXmlSitemapDataProvider
+                    config {
+                        table = tx_news_domain_model_news
+                        sortField = sorting
+                        lastModifiedField = tstamp
+                        #changeFreqField = news_changefreq
+                        #priorityField = news_priority
+                        #additionalWhere = AND uid IN (SELECT uid_local FROM sys_category_record_mm WHERE uid_foreign = 3)
+                        additionalWhere = uid IN (SELECT uid_foreign FROM sys_category_record_mm WHERE uid_local=3)
+                        ### Die ID der Ordners in dem die News liegen ###
+                        pid = 102
+                        recursive = 2
+                        url {
+                            ### Die ID der Detailseite angeben ###
+                            pageId = 104
+                            useCategorySinglePid = 1
+
+                            fieldToParameterMap {
+                                uid = tx_news_pi1[news]
+                            }
+                            additionalGetParameters {
+                                tx_news_pi1.controller = News
+                                tx_news_pi1.action = detail
+                            }
+                        }
+                    }
+                }
+                referenzen {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    #provider = GeorgRinger\News\Seo\NewsXmlSitemapDataProvider
+                    config {
+                        table = tx_news_domain_model_news
+                        sortField = sorting
+                        lastModifiedField = tstamp
+                        #changeFreqField = news_changefreq
+                        #priorityField = news_priority
+                        #additionalWhere = AND uid IN (SELECT uid_local FROM sys_category_record_mm WHERE uid_foreign = 3)
+                        additionalWhere = uid IN (SELECT uid_foreign FROM sys_category_record_mm WHERE uid_local=2)
+                        ### Die ID der Ordners in dem die News liegen ###
+                        pid = 75
+                        recursive = 2
+                        url {
+                            ### Die ID der Detailseite angeben ###
+                            pageId = 77
+                            useCategorySinglePid = 1
+
+                            fieldToParameterMap {
+                                uid = tx_news_pi1[news]
+                            }
+                            additionalGetParameters {
+                                tx_news_pi1.controller = News
+                                tx_news_pi1.action = detail
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

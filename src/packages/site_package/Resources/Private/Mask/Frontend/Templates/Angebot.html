@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <f:if condition="{data.header}">
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-12 col-lg-7">
                    <h2>{data.header}</h2>
                 </div>
                 <div class="col-0 col-md-2"></div>
@@ -10,7 +10,7 @@
         </div>
         <f:if condition="{data.bodytext}">
             <div class="row d-flex justify-content-center pb-20">
-                <div class="col-12 col-md-7 {f:if(condition: '{data.tx_mask_section_with_offer -> f:count()} == 6', then: 'txt-blue')}">
+                <div class="col-12 col-md-12 col-lg-7 {f:if(condition: '{data.tx_mask_section_with_offer -> f:count()} == 6', then: 'txt-bluee')}">
                     <f:if condition="{data.tx_mask_section_with_offer -> f:count()} == 6">
                         <f:then>
                             <div class="ps-2"><f:format.nl2br>{data.bodytext}</f:format.nl2br></div>
@@ -19,13 +19,12 @@
                             <f:format.nl2br>{data.bodytext}</f:format.nl2br>
                         </f:else>
                     </f:if>
-
                 </div>
                 <div class="col-0 col-md-2"></div>
             </div>
         </f:if>
         <div class="row pt-40 justify-content-center">
-            <div class="col-12  {f:if(condition: '{data.tx_mask_section_with_offer -> f:count()} == 7', then: 'col-md-10', else:'col-md-9')}">
+            <div class="col-12  {f:if(condition: '{data.tx_mask_section_with_offer -> f:count()} == 7', then: 'col-md-12 col-lg-10', else:'col-md-12 col-lg-9')}">
                 <div class="container p-0">
                     <div class="row">
                         <f:if condition="{data.tx_mask_section_with_offer}">

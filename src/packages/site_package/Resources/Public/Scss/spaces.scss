@@ -23,49 +23,44 @@
   padding-top: 4.5vw;
   margin-top: 0px;
   @media screen and (max-width: $sm){
-    padding-top: 9.5vw;
+    padding-top: 6.5vw;
   }
 }
 .frame-space-before-4 {
   padding-top: 4vw;
   margin-top: 0px;
-
+  @media screen and (max-width: $sm){
+    padding-top: 6.5vw;
+  }
 }
 .frame-space-after-medium {
   padding-bottom: 4.5vw;
   margin-bottom: 0px;
   @media screen and (max-width: $sm){
-    padding-bottom: 9.5vw;
+    padding-bottom: 6.5vw;
   }
 }
+
 .frame-space-before-large {
   padding-top: 6vw;
   margin-top: 0px;
-  @media screen and (max-width: $sm){
-    padding-top: 11vw;
-  }
+
 }
 .frame-space-after-large {
   padding-bottom: 6vw;
   margin-bottom: 0px;
-  @media screen and (max-width: $sm){
-    padding-bottom: 11vw;
-  }
+
 }
 
 .frame-space-before-extra-large {
   padding-top: 8vw;
   margin-top: 0px;
-  @media screen and (max-width: $sm){
-    padding-top: 14vw;
-  }
+
 }
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
   margin-bottom: 0px;
-  @media screen and (max-width: $sm){
-    padding-bottom: 14vw;
-  }
+
 }
 .pt-10 { padding-top: 10px; }
 .pt-20 { padding-top: 20px; }

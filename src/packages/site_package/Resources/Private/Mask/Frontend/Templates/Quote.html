@@ -1,5 +1,5 @@
 <section class="quote pt-90 pb-90">
-    <div class="container p-0 {f:if(condition: '{data.tx_mask_add_lines_before}',then:'line-top')}">
+    <div class="container  {f:if(condition: '{data.tx_mask_add_lines_before}',then:'line-top')}">
         <div class="row txt-blue">
             <div class="col-12 pb-30">
                 <f:if condition="{data.header}">
@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center pb-30">
-            <div class="col-12 col-md-7 col-lg-5">
+            <div class="col-12 col-md-7 col-lg-5 p-0">
                 <f:for each="{data.tx_mask_quote_image}" as="file">
                     <f:image image="{file}" width="1200" class="w-100 h-auto" />
                     <f:if condition="{file.description}">

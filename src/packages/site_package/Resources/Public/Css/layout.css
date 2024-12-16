@@ -118,7 +118,7 @@
   }
   .navbar {
     padding-bottom: 3rem;
-    padding-top: 23px;
+    padding-top: 23px !important;
     z-index: 9;
   }
   .navbar-light .navbar-toggler {
@@ -456,7 +456,7 @@
   }
   .navbar {
     padding-bottom: 15px;
-    padding-top: 23px;
+    padding-top: 23px !important;
     z-index: 9;
   }
   /*.navbar-light .navbar-toggler {
@@ -711,13 +711,18 @@ nav .collapsed-menu::-webkit-scrollbar {
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-before-medium {
-    padding-top: 9.5vw;
+    padding-top: 6.5vw;
   }
 }
 
 .frame-space-before-4 {
   padding-top: 4vw;
   margin-top: 0px;
+}
+@media screen and (max-width: 575.9px) {
+  .frame-space-before-4 {
+    padding-top: 6.5vw;
+  }
 }
 
 .frame-space-after-medium {
@@ -726,7 +731,7 @@ nav .collapsed-menu::-webkit-scrollbar {
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-after-medium {
-    padding-bottom: 9.5vw;
+    padding-bottom: 6.5vw;
   }
 }
 
@@ -734,40 +739,20 @@ nav .collapsed-menu::-webkit-scrollbar {
   padding-top: 6vw;
   margin-top: 0px;
 }
-@media screen and (max-width: 575.9px) {
-  .frame-space-before-large {
-    padding-top: 11vw;
-  }
-}
 
 .frame-space-after-large {
   padding-bottom: 6vw;
   margin-bottom: 0px;
-}
-@media screen and (max-width: 575.9px) {
-  .frame-space-after-large {
-    padding-bottom: 11vw;
-  }
 }
 
 .frame-space-before-extra-large {
   padding-top: 8vw;
   margin-top: 0px;
 }
-@media screen and (max-width: 575.9px) {
-  .frame-space-before-extra-large {
-    padding-top: 14vw;
-  }
-}
 
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
   margin-bottom: 0px;
-}
-@media screen and (max-width: 575.9px) {
-  .frame-space-after-extra-large {
-    padding-bottom: 14vw;
-  }
 }
 
 .pt-10 {
@@ -1361,6 +1346,11 @@ p.title {
   margin-top: 20px;
   padding-bottom: 40px;
 }
+@media (max-width: 767.9px) {
+  p.title {
+    padding-bottom: 20px;
+  }
+}
 
 .nice-touch {
   padding-top: 30px;
@@ -1563,7 +1553,8 @@ footer .nav-item a.nav-link {
 
 .page-76 .article:hover {
   transition: all 0.2s ease-in-out;
-  background: #C0DBEE;
+  background: #D5EAF5;
+  background: #e4e2cb;
 }
 
 .page-103 .article:hover {
@@ -1580,7 +1571,7 @@ footer .nav-item a.nav-link {
 }
 
 .article:hover .header h3 span {
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
 }
 
 .article:hover .header h3 {
@@ -1635,9 +1626,11 @@ hr {
 }
 .frame-layout-5 ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 .frame-layout-5 ul li {
+  margin-bottom: 5px;
   list-style: none !important;
   padding: 6px 15px 2px 15px !important;
   border-radius: 30px !important;
@@ -1806,6 +1799,10 @@ em {
   padding-right: 8vw;
 }
 
+.bigger-text h1 {
+  padding-right: 8vw;
+}
+
 .ce-gallery img {
   width: 100% !important;
   height: auto !important;
@@ -1951,10 +1948,15 @@ textarea::placeholder {
 .like-h3 {
   font-size: 27px;
 }
+@media (max-width: 767.9px) {
+  .like-h3 {
+    font-size: 21px;
+  }
+}
 
 .joblink:hover .arrowman img {
   transform: translateX(10px); /* Move left by 10px */
-  transition: transform 0.3s ease; /* Smooth animation */
+  transition: transform 0.3s linear; /* Smooth animation */
 }
 
 .txt-small, .txt-small * {
@@ -2299,8 +2301,8 @@ input[type=radio]:checked:after {
   border-radius: 5px;
   width: 100%;
   margin-top: 5px;
-  max-height: 28vw;
-  overflow-y: auto;
+  max-height: 55vw;
+  overflow-y: scroll;
   padding: 10px;
 }
 
@@ -2394,4 +2396,122 @@ input[type=radio]:checked:after {
 
 .bright-future .form-group .options {
   background: #f8f7f1;
+}
+
+span.true {
+  height: 9px;
+  width: 9px;
+  background-color: #0082CA;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulsate 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+span.false {
+  height: 9px;
+  width: 9px;
+  background-color: slategrey;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.class1 {
+  font-size: 12px;
+  margin-right: 7px;
+}
+.class1:last-of-type {
+  margin-right: 0px;
+}
+
+.job-box {
+  display: block; /* Ensure job-box is treated as a block element */
+}
+
+.job-box {
+  display: block; /* Ensure job-box is treated as a block element */
+}
+
+.first-line {
+  display: flex; /* This keeps minibeschr and joblink in a row */
+  justify-content: space-between; /* Adjust alignment as needed */
+  width: 100%;
+}
+
+.rest-of-data {
+  width: 100%; /* Ensure it takes full width */
+  display: flex; /* Ensure it is a block element */
+  flex-direction: row;
+  padding-bottom: 20px;
+  justify-content: end;
+}
+
+textarea:focus, input:focus {
+  color: #0082CA;
+}
+
+.powermail_radio {
+  width: max-content !important;
+}
+
+#nav-nav-ok {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.frame-type-text header {
+  padding-bottom: 15px;
+}
+
+.footerbabys a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media (max-width: 575.9px) {
+  .news .article .teaser-text {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 575.9px) {
+  .header h3 {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.thisistitle.has-selection span {
+  width: 12px !important;
+  height: 12px !important;
+  background: #0082CA;
+  display: block;
+  border-radius: 30px;
+  margin-right: 5px;
+  margin-top: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.thisistitle {
+  display: flex;
+  flex-direction: row;
+}
+.thisistitle span {
+  width: 0px !important;
+  height: 12px !important;
+  margin-right: 0px;
 }

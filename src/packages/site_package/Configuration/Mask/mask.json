@@ -176,10 +176,12 @@
                     "columns": [
                         "tx_mask_make_the_image_less_wide",
                         "header",
-                        "tx_mask_image_image_scherlr"
+                        "tx_mask_image_image_scherlr",
+                        "tx_mask_add_image_handy_hochformat"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         "",
                         "",
                         ""
@@ -191,7 +193,8 @@
                     "labels": [
                         "Add some space left and right",
                         "",
-                        "Add image"
+                        "Add image",
+                        "Ein Bild im Hochformat (optional)"
                     ],
                     "shortLabel": "",
                     "sorting": 0
@@ -228,6 +231,7 @@
                     "columns": [
                         "tx_mask_big_text_biger",
                         "tx_mask_make_me_h1",
+                        "tx_mask_make_first_bigger_text_as_h1",
                         "tx_mask_bck_col",
                         "header",
                         "tx_mask_small_text_left",
@@ -250,6 +254,7 @@
                         "",
                         "",
                         "",
+                        "",
                         ""
                     ],
                     "icon": "",
@@ -259,6 +264,7 @@
                     "labels": [
                         "All paddings smaller",
                         "Should I create an H1? (Only one per page)",
+                        "Make big text as H1",
                         "Background color",
                         "Blue headline",
                         "Small text left (default: blue)",
@@ -326,6 +332,11 @@
                 }
             },
             "sql": {
+                "tx_mask_add_image_handy_hochformat": {
+                    "tt_content": {
+                        "tx_mask_add_image_handy_hochformat": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_add_lines_before": {
                     "tt_content": {
                         "tx_mask_add_lines_before": "int(11) DEFAULT '0' NOT NULL"
@@ -409,6 +420,11 @@
                 "tx_mask_link_undert_text": {
                     "tt_content": {
                         "tx_mask_link_undert_text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_make_first_bigger_text_as_h1": {
+                    "tt_content": {
+                        "tx_mask_make_first_bigger_text_as_h1": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_make_it_wider": {
@@ -501,6 +517,28 @@
                     "fullKey": "header",
                     "key": "header",
                     "type": "string"
+                },
+                "tx_mask_add_image_handy_hochformat": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_add_image_handy_hochformat",
+                    "imageoverlayPalette": 1,
+                    "key": "add_image_handy_hochformat",
+                    "type": "file"
                 },
                 "tx_mask_add_lines_before": {
                     "config": {
@@ -840,6 +878,15 @@
                     "fullKey": "tx_mask_link_undert_text",
                     "key": "link_undert_text",
                     "type": "link"
+                },
+                "tx_mask_make_first_bigger_text_as_h1": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_make_first_bigger_text_as_h1",
+                    "key": "make_first_bigger_text_as_h1",
+                    "type": "check"
                 },
                 "tx_mask_make_it_wider": {
                     "config": {

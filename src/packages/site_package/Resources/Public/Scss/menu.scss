@@ -140,7 +140,7 @@
   }
   .navbar {
     padding-bottom: 3rem;
-    padding-top: 23px;
+    padding-top: 23px !important;
     z-index: 9;
   }
   .navbar-light .navbar-toggler {
@@ -481,7 +481,7 @@
   }
   .navbar {
     padding-bottom: 15px;
-    padding-top: 23px;
+    padding-top: 23px !important;
     z-index: 9;
   }
   /*.navbar-light .navbar-toggler {

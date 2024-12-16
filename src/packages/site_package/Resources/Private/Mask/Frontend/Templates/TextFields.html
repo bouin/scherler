@@ -6,7 +6,7 @@
             <div class="pt-40 container {f:if(condition: '{data.tx_mask_big_text_biger}', then:'pt-30 pb-40', else: 'pt-90 pb-70')}">
 
                 <div class="row justify-content-center">
-                    <div class="col-12 col-md-9">
+                    <div class="col-12 col-md-12 col-lg-9">
                         <div class="row">
                             <f:if condition="{data.tx_mask_small_text_left}">
                                 <div class="pb-10 col-12 col-md-4 {f:if(condition: '{data.tx_mask_small_text_not_blue}==1',then:'',else:'txt-blue')}">
@@ -26,7 +26,7 @@
                                 </div>
                             </f:if>
                             <f:if condition="{data.tx_mask_text_next_to_small}">
-                                <div class="col-12 col-md-8">
+                                <div class="col-12 col-md-12 col-lg-8">
                                     {data.tx_mask_text_next_to_small -> f:format.html()}
                                 </div>
                             </f:if>
@@ -36,23 +36,30 @@
 
                 <f:if condition="{data.tx_mask_first_big_text}">
                     <div class="row justify-content-center bigger-text">
-                        <div class="col-12 col-md-9 txt-29">
-                                <f:format.html>{data.tx_mask_first_big_text}</f:format.html>
+                        <div class="col-12 col-md-12 col-lg-9 txt-29">
+                            <f:if condition="{data.tx_mask_make_first_bigger_text_as_h1}">
+                                <f:then>
+                                    <h1><f:format.stripTags allowedTags="<br>">{data.tx_mask_first_big_text}</f:format.stripTags></h1>
+                                </f:then>
+                                <f:else>
+                                    <f:format.html>{data.tx_mask_first_big_text}</f:format.html>
+                                </f:else>
+                            </f:if>
                         </div>
                     </div>
                 </f:if>
                 <f:if condition="{data.tx_mask_second_big_text}">
                     <div class="row d-flex justify-content-end">
-                        <div class="col-12 col-md-8 pt-20">
+                        <div class="col-12 col-md-12 col-lg-8 pt-20">
                                 <f:format.html>{data.tx_mask_second_big_text}</f:format.html>
                         </div>
-                        <div class="col-0 col-md-1">
+                        <div class="col-0 col-md-0 col-lg-1">
                         </div>
                     </div>
                 </f:if>
                 <f:if condition="{data.tx_mask_text_on_the_link} && {data.tx_mask_link_undert_text}">
                     <div class="row d-flex justify-content-end">
-                        <div class="col-12 col-md-8 pt-40 ">
+                        <div class="col-12 col-md-12 col-lg-8 pt-40 ">
                             <f:if condition="{data.tx_mask_link_undert_text}">
                                 <f:link.typolink parameter="{data.tx_mask_link_undert_text}" class="btn-arrow no-link">
                                     <f:if condition="{data.tx_mask_text_on_the_link}">
@@ -61,7 +68,7 @@
                                 </f:link.typolink>
                             </f:if>
                         </div>
-                        <div class="col-0 col-md-1">
+                        <div class="col-0 col-md-0 col-lg-1">
                         </div>
                     </div>
                 </f:if>
