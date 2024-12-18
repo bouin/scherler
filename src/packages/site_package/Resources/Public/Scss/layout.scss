@@ -72,10 +72,11 @@ footer .navbar-nav {
   color: white;
   font-family: "Poppins", sans-serif;
   font-family: "atyp-bl-variable", sans-serif;
-  font-variation-settings: "opsz" 6, "ital" 0, "wght" 400;
+  font-variation-settings: "opsz" 6, "ital" 0, "wght" 500;
+  font-variation-settings: "opsz" 6, "ital" 0, "wght" 500;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.2;
+  font-size: 29px;
+  line-height: 1.1;
 }
 .navbar-brand img, .navbar-brand svg {
   width: 200px;
@@ -982,7 +983,7 @@ input[type='radio']:checked:after {
     .navbar-toggler.collapsed #nav-icon span {
       background-color: black;
     }
-    background-color: $lightblue2;
+    /*background-color: $lightblue2;*/
     .cls-1 {
       transition: fill .3s linear;
       fill: $blue
@@ -1001,7 +1002,9 @@ input[type='radio']:checked:after {
       background-color:  #F2F3F6;
     }
     &:hover {
+      /*hier123*/
       background-color: #F2F3F6;
+      /*backdrop-filter: blur(10px);*/
     }
   }
 }
@@ -1011,7 +1014,9 @@ input[type='radio']:checked:after {
       background-color:  #F8F7F1;
     }
     &:hover {
-      background-color: #F8F7F1;
+      /*hier123*/
+      background-color: #F2F3F6;
+      /*backdrop-filter: blur(10px);*/
     }
   }
 }
@@ -1336,3 +1341,4 @@ textarea:focus, input:focus {
     margin-right: 0px;
   }
 }
+

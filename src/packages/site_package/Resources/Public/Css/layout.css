@@ -1155,10 +1155,11 @@ footer .navbar-nav a.nav-link:hover {
   color: white;
   font-family: "Poppins", sans-serif;
   font-family: "atyp-bl-variable", sans-serif;
-  font-variation-settings: "opsz" 6, "ital" 0, "wght" 400;
+  font-variation-settings: "opsz" 6, "ital" 0, "wght" 500;
+  font-variation-settings: "opsz" 6, "ital" 0, "wght" 500;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.2;
+  font-size: 29px;
+  line-height: 1.1;
 }
 
 .navbar-brand img, .navbar-brand svg {
@@ -1438,7 +1439,7 @@ footer .nav-item a.nav-link {
 }
 
 .bck-beige {
-  background: #F3EDE0;
+  background: #f4ebd6;
 }
 
 .iaminside {
@@ -1670,7 +1671,7 @@ h4 {
 }
 
 .frame-layout-9 {
-  background-color: #F3EDE0;
+  background-color: #f4ebd6;
 }
 
 .frame-layout-12 {
@@ -2161,7 +2162,7 @@ input[type=radio]:checked:after {
   border: 1px solid black;
 }
 #nav-nav-ok:hover {
-  background-color: #D7E4F6;
+  /*background-color: $lightblue2;*/
 }
 #nav-nav-ok:hover .navbar-nav .nav-link {
   color: black;
@@ -2184,14 +2185,18 @@ input[type=radio]:checked:after {
   background-color: #F2F3F6;
 }
 .background-color-changed-5 #nav-nav-ok:hover {
+  /*hier123*/
   background-color: #F2F3F6;
+  /*backdrop-filter: blur(10px);*/
 }
 
 .background-color-changed-6 #nav-nav-ok.color {
   background-color: #F8F7F1;
 }
 .background-color-changed-6 #nav-nav-ok:hover {
-  background-color: #F8F7F1;
+  /*hier123*/
+  background-color: #F2F3F6;
+  /*backdrop-filter: blur(10px);*/
 }
 
 .background-color-changed-7 #nav-nav-ok.color {
