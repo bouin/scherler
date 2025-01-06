@@ -30,41 +30,44 @@
                         <f:if condition="{data.tx_mask_section_with_offer}">
                             <f:for each="{data.tx_mask_section_with_offer}" as="data_item" iteration="iterix">
                                 <div class="col-6 col-md-6  iterix-{data.tx_mask_section_with_offer -> f:count()} {f:if(condition: '{iterix.isLast} && {data.tx_mask_section_with_offer -> f:count()} == 7', then: 'col-lg-6', else:'col-lg-3')} {f:if(condition: '{data.tx_mask_section_with_offer -> f:count()} == 6', then: 'col-lg-4')} px-1 mb-2">
-                                    <f:if condition="{data_item.tx_mask_linkman}">
-                                        <f:link.typolink parameter="{data_item.tx_mask_linkman}">
-                                            <div class="iaminside h-100 d-flex justify-content-between flex-column">
-                                                <f:if condition="{data_item.tx_mask_offer_item_title}">
-                                                    <div>
-                                                        <h3 class="like-txt-20">
-                                                            <span><f:format.stripTags allowedTags="<br>">{data_item.tx_mask_offer_item_title}</f:format.stripTags></span>
-                                                            <f:if condition="data_item.tx_mask_tx_mask_offer_item_title_two">
-                                                                <br>
-                                                                <span>{data_item.tx_mask_tx_mask_offer_item_title_two}</span>
-                                                            </f:if>
-                                                            <f:if condition="{data_item.tx_mask_three}">
-                                                                <br>
-                                                                <span>{data_item.tx_mask_three}</span>
-                                                            </f:if>
-                                                        </h3>
-                                                    </div>
-                                                </f:if>
-                                                <div class="txt-16 p-margin-small">
-                                                    <f:if condition="{data_item.tx_mask_first_subtitle}">
-                                                        <f:format.raw>{data_item.tx_mask_first_subtitle}</f:format.raw>
-                                                    </f:if>
-                                                    <f:if condition="{data_item.tx_mask_second_subtitle}">
-                                                        <f:format.raw>{data_item.tx_mask_second_subtitle}</f:format.raw>
-                                                    </f:if>
-                                                    <f:if condition="{data_item.tx_mask_fourth_subtitle}">
-                                                        <f:format.raw>{data_item.tx_mask_fourth_subtitle}</f:format.raw>
-                                                    </f:if>
-                                                    <f:if condition="{data_item.tx_mask_fifth_subtitle}">
-                                                        <f:format.raw>{data_item.tx_mask_fifth_subtitle}</f:format.raw>
+                                    <div class="position-relative iaminside">
+
+                                        <f:if condition="{data_item.tx_mask_linkman}">
+                                            <f:link.typolink parameter="{data_item.tx_mask_linkman}">
+                                                <div class="h-100 d-flex justify-content-between flex-column">
+                                                    <f:if condition="{data_item.tx_mask_offer_item_title}">
+                                                        <div>
+                                                            <h3 class="like-txt-20">
+                                                                <span><f:format.stripTags allowedTags="<br>">{data_item.tx_mask_offer_item_title}</f:format.stripTags></span>
+                                                                <f:if condition="data_item.tx_mask_tx_mask_offer_item_title_two">
+                                                                    <br>
+                                                                    <span>{data_item.tx_mask_tx_mask_offer_item_title_two}</span>
+                                                                </f:if>
+                                                                <f:if condition="{data_item.tx_mask_three}">
+                                                                    <br>
+                                                                    <span>{data_item.tx_mask_three}</span>
+                                                                </f:if>
+                                                            </h3>
+                                                        </div>
                                                     </f:if>
                                                 </div>
+                                            </f:link.typolink>
+                                            <div class="txt-16 p-margin-small position-absolute bottom-0 pb-10">
+                                                <f:if condition="{data_item.tx_mask_first_subtitle}">
+                                                    <f:format.html>{data_item.tx_mask_first_subtitle}</f:format.html>
+                                                </f:if>
+                                                <f:if condition="{data_item.tx_mask_second_subtitle}">
+                                                    <f:format.html>{data_item.tx_mask_second_subtitle}</f:format.html>
+                                                </f:if>
+                                                <f:if condition="{data_item.tx_mask_fourth_subtitle}">
+                                                    <f:format.html>{data_item.tx_mask_fourth_subtitle}</f:format.html>
+                                                </f:if>
+                                                <f:if condition="{data_item.tx_mask_fifth_subtitle}">
+                                                    <f:format.html>{data_item.tx_mask_fifth_subtitle}</f:format.html>
+                                                </f:if>
                                             </div>
-                                        </f:link.typolink>
-                                    </f:if>
+                                        </f:if>
+                                    </div>
                                 </div>
                             </f:for>
                         </f:if>

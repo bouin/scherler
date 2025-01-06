@@ -51,15 +51,24 @@
 
  document.addEventListener('DOMContentLoaded', function () {
 
+    /*JavaScript code to navigate to the link stored in the data-link attribute when clicked*/
+    document.querySelectorAll('[data-link]').forEach(function (element) {
+        element.addEventListener('click', function () {
+            const link = element.getAttribute('data-link');
+            if (link) {
+                window.location.href = link;
+            }
+        });
+    });
 
-// Check if the page is already scrolled down on load
-window.onload = function() {
-    if (window.pageYOffset >= 300) {
-        document.getElementById("nav-nav-ok").style.top = "-100px"; // Example: hide the navbar
-    } else {
-        document.getElementById("nav-nav-ok").style.top = "0"; // Example: show the navbar
-    }
-};
+    // Check if the page is already scrolled down on load
+    window.onload = function() {
+        if (window.pageYOffset >= 300) {
+            document.getElementById("nav-nav-ok").style.top = "-100px"; // Example: hide the navbar
+        } else {
+            document.getElementById("nav-nav-ok").style.top = "0"; // Example: show the navbar
+        }
+    };
      /*toggling the menu visibility based on the scroll position*/
 
         var prevScrollpos = window.pageYOffset;
@@ -488,3 +497,4 @@ function displayJobs(jobs) {
 }
 
 fetchJobs();
+
